@@ -50,7 +50,7 @@ const NavItem = styled.li`
 const NavLink = styled(GatsbyLink)`
   position: relative;
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 0.25rem 0;
   color: #333;
   opacity: 0.7;
@@ -76,6 +76,10 @@ const NavLink = styled(GatsbyLink)`
 
   &:hover:after {
     --scale: 1;
+  }
+
+  @media (min-width: ${props => props.theme.screen.lg}) {
+    font-size: 1.8rem;
   }
 `
 export default NavList

@@ -51,15 +51,17 @@ const About = () => (
               <p>I've been designing sites for the past 20 years.</p>
               <p>
                 I help companies improve, design, usability and performance of
-                their sites.</p>
-                <p>I focus on delivering value by making functional, simple to use and accessible sites.
+                their sites.
               </p>
               <p>
-                I currently work as a UX Designer / Front-End Developer at{' '}
+                I focus on delivering value by making functional, simple to use
+                and accessible sites.
+              </p>
+              <p>
+                I am currently working as a UX Designer / Front-End Developer at{' '}
                 <ExternalLink href="https://fosterinteractive.com">
                   Foster Interactive
-                </ExternalLink>
-                . I am based in London, ON, Canada.
+                </ExternalLink>. I am based in London, ON, Canada.
               </p>
             </Description>
           </Details>

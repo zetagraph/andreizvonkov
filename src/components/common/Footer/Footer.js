@@ -7,7 +7,7 @@ import { ReactComponent as GitHubIcon } from '../../../images/icons/github.svg'
 const SOCIAL_ICONS = [
   {
     icon: GitHubIcon,
-    link: 'https://github.com/zetagraph',
+    link: 'https://github.com/zetagraph/andreizvonkov',
   },
 ]
 

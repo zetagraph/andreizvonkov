@@ -162,7 +162,7 @@ const Work = () => (
             </span>
           </ItemScreenshot>
 
-          <FooterTitle>I've worked with thess brands</FooterTitle>
+          <FooterTitle>Some brands I've worked with</FooterTitle>
           <Logos>
             {LOGOS.map(({ logo, name }) => (
               <Logo key={name}>{logo()}</Logo>

@@ -64,6 +64,8 @@ const Container = styled.div`
   }
 `
 const Brand = styled(GatsbyLink)`
+  display: block;
+  margin-bottom: 1rem;
   color: #727272;
 
   strong {
@@ -91,6 +93,10 @@ const Brand = styled(GatsbyLink)`
     margin: 0 0.5rem;
     background-color: var(--yellow);
     border-radius: 50%;
+  }
+
+  @media (min-width: ${props => props.theme.screen.lg}) {
+    margin-bottom: 0;
   }
 `
 export default Header
