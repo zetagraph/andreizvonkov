@@ -108,7 +108,7 @@ const Container = styled.div`
 `
 
 const HeaderTitle = styled.h2`
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   font-size: 2.4rem;
   font-weight: 200;
   line-height: 1.2;
@@ -132,7 +132,7 @@ const HeaderTitle = styled.h2`
 const Item = styled.div`
   position: relative;
   border: 1px solid #eee;
-  padding: 4rem;
+  padding: 2rem;
   margin-bottom: 2rem;
 
   &:before {

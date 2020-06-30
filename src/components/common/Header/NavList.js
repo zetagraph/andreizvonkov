@@ -14,10 +14,10 @@ const NavList = () => (
       <NavLink to="/#about">About</NavLink>
     </NavItem>
     <NavItem>
-      <NavLink to="/notes">Notes</NavLink>
+      <NavLink to="/#contact">Contact</NavLink>
     </NavItem>
     <NavItem>
-      <NavLink to="/#contact">Contact</NavLink>
+      <NavLink to="/notes">Notes</NavLink>
     </NavItem>
   </NavItems>
 )

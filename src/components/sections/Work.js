@@ -216,7 +216,7 @@ const HeaderTitle = styled.h2`
 `
 
 const ItemDetails = styled.div`
-  padding: 4rem 4rem 0;
+  padding: 2rem 2rem 0;
   border-top: 1px solid #eee;
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
@@ -287,7 +287,7 @@ const ListItem = styled.li`
 `
 
 const ItemScreenshot = styled.div`
-  padding: 4rem;
+  padding: 2rem;
   border-bottom: 1px solid #eee;
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
