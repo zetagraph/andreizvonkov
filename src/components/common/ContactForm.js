@@ -23,12 +23,30 @@ export default class ContactForm extends React.Component {
           action="https://formspree.io/xbjzorvo"
           method="POST"
         >
-          <label htmlFor="name" className="visually-hidden">Your Name:</label>
-          <input id="name" type="text" name="name" placeholder="Your Name" required />
-          <label htmlFor="email" className="visually-hidden">Your Email:</label>
-          <input id="email" type="email" name="email" placeholder="Your Email" required />
-          <label htmlFor="message" className="visually-hidden">Message:</label>
-          <textarea id="message" name="textarea" />
+          <label htmlFor="name">
+            <span className="visually-hidden">Your Name:</span>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </label>
+          <label htmlFor="email">
+            <span className="visually-hidden">Your Email:</span>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </label>
+          <label htmlFor="message">
+            <span className="visually-hidden">Message:</span>
+            <textarea id="message" name="textarea" />
+          </label>
           {status === 'SUCCESS' ? (
             <div className="Form_Success_Message">Thanks You!</div>
           ) : (

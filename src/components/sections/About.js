@@ -48,13 +48,13 @@ const About = () => (
               Andrei Zvonkov &middot; <strong>UX</strong> Designer
             </Name>
             <Description>
-              <p>I've been designing sites for the past 20 years.</p>
+              <p>I've been making websites for the past 20 years.</p>
               <p>
-                I help companies improve, design, usability and performance of
+                I help companies and organizations improve design, usability and performance of
                 their sites.
               </p>
               <p>
-                I focus on delivering value by making functional, simple to use
+                I try to deliver value by making functional, simple to use
                 and accessible sites.
               </p>
               <p>
@@ -82,35 +82,29 @@ const Section = styled.section`
 `
 const Container = styled.div`
   padding: 4rem 2rem 2rem;
+  margin-bottom: 3rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     padding: 10rem 10rem 0 6rem;
+    margin-bottom: 0;
   }
 `
 
 const Photo = styled.div`
-  padding: 4rem;
-  border-top: 1px solid #eee;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  margin-bottom: 2rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     position: relative;
     grid-row: 1 / 1;
     grid-column: 1 / span 5;
-    padding: 0;
-    border: none;
+    margin-bottom: 0;
     box-shadow: 0 20px 50px 0 rgba(45, 65, 90, 0.1);
   }
 `
 
 const Details = styled.div`
-  padding: 0 4rem 4rem;
-  border-bottom: 1px solid #eee;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
   font-weight: 100;
 
   @media (min-width: ${props => props.theme.screen.lg}) {

@@ -18,8 +18,8 @@ const Contact = () => (
       <ContactContent>
         <ContactTitle>Get in Touch</ContactTitle>
         <p>
-          Please feel free to get in touch by using the form or
-          just send me an <a href="mailto:zvonkov@gmail.com">Email</a>.
+          Please feel free to get in touch by using the form or just send me an{' '}
+          <a href="mailto:zvonkov@gmail.com">Email</a>.
         </p>
 
         <p>
@@ -42,7 +42,6 @@ const Contact = () => (
 )
 
 const Section = styled.section`
-  padding: 10rem 2rem 2rem;
 
   @media screen and (min-width: 900px) {
     padding: 10rem 0 16rem 0;
@@ -50,8 +49,6 @@ const Section = styled.section`
 `
 
 const Container = styled.div`
-  padding: 4rem 2rem 2rem;
-
   @media (min-width: ${props => props.theme.screen.lg}) {
     max-width: 2000px;
     display: grid;
@@ -61,7 +58,10 @@ const Container = styled.div`
 `
 
 const FormContainer = styled.div`
+  padding: 2rem;
+
   @media (min-width: ${props => props.theme.screen.lg}) {
+    padding: 0;
     grid-column: 7 / span 6;
   }
 `
@@ -86,7 +86,7 @@ const ContactTitle = styled.div`
 `
 
 const ContactContent = styled.div`
-  margin-bottom: 4rem;
+  padding: 4rem 2rem 2rem;
 
   p {
     font-weight: 300;
@@ -108,7 +108,7 @@ const ContactContent = styled.div`
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     grid-column: 2 / span 4;
-    margin-bottom: 0;
+    padding: 0;
   }
 `
 export default Contact

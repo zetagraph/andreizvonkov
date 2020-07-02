@@ -86,7 +86,7 @@ const Experience = () => (
 
 const Section = styled.section`
   position: relative;
-  padding-top: 4rem;
+  padding-top: 3rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     padding-top: 0;
@@ -133,7 +133,10 @@ const Item = styled.div`
   position: relative;
   border: 1px solid #eee;
   padding: 2rem;
-  margin-bottom: 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 
   &:before {
     position: absolute;

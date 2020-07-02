@@ -175,7 +175,7 @@ const Work = () => (
 )
 
 const Section = styled.section`
-  padding-top: 4rem;
+  padding-top: 3rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     padding-top: 0;
@@ -185,7 +185,7 @@ const Section = styled.section`
 `
 
 const Container = styled.div`
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 0 0;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     max-width: 2000px;
@@ -198,10 +198,11 @@ const Container = styled.div`
 `
 
 const HeaderTitle = styled.h2`
+  padding: 0 2rem;
   margin-bottom: 4rem;
   font-size: 2.4rem;
   font-weight: 200;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #929292;
 
   strong {
@@ -216,10 +217,8 @@ const HeaderTitle = styled.h2`
 `
 
 const ItemDetails = styled.div`
-  padding: 2rem 2rem 0;
-  border-top: 1px solid #eee;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     grid-column: 1 / span 4;
@@ -232,7 +231,7 @@ const ItemDetails = styled.div`
   a {
     display: inline-block;
     position: relative;
-    color: #757575;
+    color: var(--black);
     font-weight: 400;
 
     @media (min-width: ${props => props.theme.screen.lg}) {
@@ -272,13 +271,13 @@ const ItemDetailNote = styled.div`
 
 const List = styled.ul`
   list-style-type: none;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `
 
 const ListItem = styled.li`
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid #eee;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #757575;
 
   &:first-child {
@@ -288,15 +287,11 @@ const ListItem = styled.li`
 
 const ItemScreenshot = styled.div`
   padding: 2rem;
-  border-bottom: 1px solid #eee;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     grid-column: 6 / span 7;
     padding: 0;
-    border: none;
     margin-bottom: 22rem;
   }
 
@@ -319,6 +314,7 @@ const ItemScreenshotChrome = styled.div`
 `
 
 const FooterTitle = styled.h2`
+  margin-top: 4rem;
   margin-bottom: 4rem;
   text-align: center;
   font-size: 3rem;
