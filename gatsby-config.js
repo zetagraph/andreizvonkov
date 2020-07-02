@@ -72,7 +72,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-171545683-1`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -87,7 +87,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-offline`
+      resolve: `gatsby-plugin-offline`,
     },
     {
       resolve: `gatsby-plugin-styled-components`,
@@ -98,7 +98,6 @@ module.exports = {
         threshold: 0.1, // Percentage of an element's area that needs to be visible to launch animation
         once: true, // Defines if animation needs to be launched once
         disable: false, // Flag for disabling animations
-
         // Advanced Options
         selector: '[data-sal]', // Selector of the elements to be animated
         animateClassName: 'sal-animate', // Class name which triggers animation
