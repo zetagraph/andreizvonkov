@@ -108,23 +108,22 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-@media (min-width: ${props => props.theme.screen.lg}) {
-  body {
+  @media (min-width: ${props => props.theme.screen.lg}) {
     background-image: linear-gradient(to right, #f5f5f5 6rem, #fff 6rem);
+
       &:before {
-        content: '';
-        background-image: url(${bgImg});
-        background-repeat: no-repeat;
-        background-position: -500% 90%;
-        background-size: 110%;
-        top: 0;
-        right: 0;
-        position: absolute;
-        height: 660px;
-        width: 640px;
-        z-index: -1;
+      content: '';
+      background-image: url(${bgImg});
+      background-repeat: no-repeat;
+      background-position: -500% 90%;
+      background-size: 110%;
+      top: 0;
+      right: 0;
+      position: absolute;
+      height: 660px;
+      width: 640px;
+      z-index: -1;
     }
   }
 }

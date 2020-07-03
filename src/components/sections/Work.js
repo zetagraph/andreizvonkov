@@ -81,7 +81,7 @@ const Work = () => (
             their sites.
           </HeaderTitle>
           <ItemDetails>
-            <ItemDetailTitle>Cheesebar.ca</ItemDetailTitle>
+            <ItemDetailTitle>Cheesebar</ItemDetailTitle>
             <ItemDetailNote>
               A site for Agropur Dairy Cooperative <br />
               (appnovation.com project)
@@ -260,13 +260,13 @@ const ItemDetails = styled.div`
 const ItemDetailTitle = styled.div`
   margin-bottom: 2rem;
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: 300;
 `
 
 const ItemDetailNote = styled.div`
   margin-bottom: 2rem;
-  font-size: 1.6rem;
-  color: #777;
+  font-size: 1.8rem;
+  color: #757575;
 `
 
 const List = styled.ul`
@@ -278,6 +278,7 @@ const ListItem = styled.li`
   padding: 1.5rem 0;
   border-bottom: 1px solid #eee;
   font-size: 2rem;
+  font-weight: 300;
   color: #757575;
 
   &:first-child {
@@ -287,7 +288,7 @@ const ListItem = styled.li`
 
 const ItemScreenshot = styled.div`
   padding: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 6rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     grid-column: 6 / span 7;
@@ -316,6 +317,7 @@ const ItemScreenshotChrome = styled.div`
 const FooterTitle = styled.h2`
   margin-top: 4rem;
   margin-bottom: 4rem;
+  padding: 0 2rem;
   text-align: center;
   font-size: 3rem;
   font-weight: 200;
@@ -325,6 +327,7 @@ const FooterTitle = styled.h2`
   @media (min-width: ${props => props.theme.screen.lg}) {
     grid-column: 1 / span 12;
     margin-bottom: 8rem;
+    padding: 0;
     font-size: calc(3rem + 2vw);
   }
 `

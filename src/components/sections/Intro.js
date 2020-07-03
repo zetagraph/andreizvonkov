@@ -46,7 +46,7 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 10vw;
   font-weight: 200;
-  line-height: 1;
+  line-height: 1.1;
   margin-bottom: 3rem;
   color: #727272;
 
@@ -58,7 +58,6 @@ const Title = styled.h1`
   @media (min-width: ${props => props.theme.screen.lg}) {
     max-width: 90rem;
     font-size: 10rem;
-    line-height: 1.1;
     margin-bottom: 6rem;
   }
 `

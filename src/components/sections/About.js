@@ -93,13 +93,15 @@ const Container = styled.div`
 `
 
 const Photo = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     position: relative;
     grid-row: 1 / 1;
     grid-column: 1 / span 5;
     margin-bottom: 0;
+  }
+  .gatsby-image-wrapper {
     box-shadow: 0 20px 50px 0 rgba(45, 65, 90, 0.1);
   }
 `
