@@ -42,7 +42,6 @@ const Contact = () => (
 )
 
 const Section = styled.section`
-
   @media screen and (min-width: 900px) {
     padding: 10rem 0 16rem 0;
   }

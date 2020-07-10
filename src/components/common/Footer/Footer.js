@@ -14,7 +14,9 @@ const SOCIAL_ICONS = [
 const Footer = () => (
   <FooterWrap>
     <Container>
-      <CopyRight>&copy; 2020 &middot; Andrei Zvonkov</CopyRight>
+      <CopyRight>
+        &copy; {new Date().getFullYear()} &middot; Andrei Zvonkov
+      </CopyRight>
       <SocialIcons>
         {SOCIAL_ICONS.map(({ icon, link }) => (
           <ExternalLink key={link} href={link}>
