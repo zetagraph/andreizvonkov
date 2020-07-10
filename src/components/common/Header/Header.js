@@ -1,19 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import Nav from '../Header/Nav'
+import Nav from './Nav'
+import MobileNav from './MobileNav'
+import Burger from './Burger'
 import { Link as GatsbyLink } from 'gatsby'
 
-const Header = () => (
-  <HeaderWrap>
-    <Container>
-      <Brand to="/">
-        Andrei Zvonkov <span className="dot"></span> <span>UX</span> Designer
-      </Brand>
-      <Nav />
-    </Container>
-    <Line />
-  </HeaderWrap>
-)
+const Header = () => {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <HeaderWrap>
+        <Container>
+          <Brand to="/">
+            Andrei Zvonkov <span className="dot"></span> <span>UX</span>{' '}
+            Designer
+          </Brand>
+          <Nav />
+          <BurgerWrap>
+            <Burger open={open} setOpen={setOpen} />
+          </BurgerWrap>
+          <MobileNav  />
+        </Container>
+        <Line />
+      </HeaderWrap>
+    </>
+  )
+}
 
 const fadeUp = keyframes`
   100% {
@@ -34,10 +47,16 @@ const pulse = keyframes`
   }
 `
 
-const HeaderWrap = styled.header`
+const HeaderWrap = styled.header``
+
+const BurgerWrap = styled.div`
+  display: block;
+
   @media (min-width: ${props => props.theme.screen.lg}) {
+    display: none;
   }
 `
+
 const Line = styled.div`
   display: none;
 

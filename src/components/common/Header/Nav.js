@@ -9,6 +9,7 @@ const Nav = () => (
 )
 
 const Container = styled.nav`
+  display: none;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     display: block;
