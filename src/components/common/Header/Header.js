@@ -2,12 +2,9 @@ import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import Nav from './Nav'
 import MobileNav from './MobileNav'
-import Burger from './Burger'
 import { Link as GatsbyLink } from 'gatsby'
 
 const Header = () => {
-  const [open, setOpen] = useState(false)
-
   return (
     <>
       <HeaderWrap>
@@ -17,10 +14,7 @@ const Header = () => {
             Designer
           </Brand>
           <Nav />
-          <BurgerWrap>
-            <Burger open={open} setOpen={setOpen} />
-          </BurgerWrap>
-          <MobileNav  />
+          <MobileNav />
         </Container>
         <Line />
       </HeaderWrap>
@@ -49,13 +43,6 @@ const pulse = keyframes`
 
 const HeaderWrap = styled.header``
 
-const BurgerWrap = styled.div`
-  display: block;
-
-  @media (min-width: ${props => props.theme.screen.lg}) {
-    display: none;
-  }
-`
 
 const Line = styled.div`
   display: none;
