@@ -97,12 +97,11 @@ const MobileNavWrap = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: var(--black);
+  background: var(--yellow);
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateY(-100%)')};
   height: 100vh;
   width: 100%;
   text-align: center;
-  /* padding: 2rem; */
   position: absolute;
   top: 0;
   left: 0;
@@ -119,8 +118,13 @@ const MobileNavItem = styled.li`
 `
 
 const MobileNavLink = styled(GatsbyLink)`
-  font-size: 4.2rem;
-  color: #fff;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--black);
+
+  &:hover {
+    color: #fff;
+  }
 `
 
 export default MobileNav
