@@ -35,10 +35,11 @@ const FooterWrap = styled.footer`
 
 const Container = styled.div`
   display: flex;
+  align-items: center;
   padding: 2rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
-    padding: 3rem 4rem 3rem 12rem;
+    padding: 3rem 2rem 3rem 12rem;
   }
 `
 
@@ -51,7 +52,8 @@ const SocialIcons = styled.div`
   margin-left: auto;
 
   a {
-    margin: 0 1rem;
+    display: inline-block;
+    padding-top: 0.5rem;
 
     &:hover {
       svg {
@@ -61,8 +63,6 @@ const SocialIcons = styled.div`
   }
 
   svg {
-    width: 32px;
-    height: 32px;
     fill: #ccc;
   }
 `

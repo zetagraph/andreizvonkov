@@ -6,8 +6,8 @@ import { Link as GatsbyLink } from 'gatsby'
 
 const Header = () => {
   return (
-    <>
-      <HeaderWrap>
+    <div id="top">
+      <HeaderWrap >
         <Container>
           <Brand to="/">
             Andrei Zvonkov <span className="dot"></span> <span>UX</span>{' '}
@@ -18,7 +18,7 @@ const Header = () => {
         </Container>
         <Line />
       </HeaderWrap>
-    </>
+    </div>
   )
 }
 
@@ -41,8 +41,20 @@ const pulse = keyframes`
   }
 `
 
-const HeaderWrap = styled.header``
+const HeaderWrap = styled.header`
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right:0;
+  z-index: 1;
+  background-color: var(--white);
 
+  @media (min-width: ${props => props.theme.screen.lg}) {
+    position: relative;
+    background-color: transparent;
+  }
+`
 
 const Line = styled.div`
   display: none;
@@ -65,14 +77,16 @@ const Container = styled.div`
   @media (min-width: ${props => props.theme.screen.lg}) {
     max-width: 2000px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 3rem 4rem 3rem 12rem;
     border-bottom: none;
   }
 `
 const Brand = styled(GatsbyLink)`
   display: block;
-  margin-bottom: 1rem;
   color: #727272;
+  font-size: 1.8rem;
 
   strong {
     font-weight: 900;
@@ -99,10 +113,6 @@ const Brand = styled(GatsbyLink)`
     margin: 0 0.5rem;
     background-color: var(--yellow);
     border-radius: 50%;
-  }
-
-  @media (min-width: ${props => props.theme.screen.lg}) {
-    margin-bottom: 0;
   }
 `
 export default Header

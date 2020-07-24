@@ -50,7 +50,7 @@ const MobileNav = () => {
 
 const Burger = styled.button`
   position: absolute;
-  top: 2.2rem;
+  top: 1.8rem;
   right: 2rem;
   display: flex;
   flex-direction: column;

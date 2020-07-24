@@ -51,7 +51,7 @@ const NavLink = styled(GatsbyLink)`
   position: relative;
   display: inline-block;
   font-size: 1.6rem;
-  padding: 0.25rem 0;
+  padding: 0 0 0.25rem;
   color: #333;
   opacity: 0.7;
   transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
