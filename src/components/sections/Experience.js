@@ -86,7 +86,7 @@ const Experience = () => (
 
 const Section = styled.section`
   position: relative;
-  padding-top: 3rem;
+  padding-top: 8rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     padding-top: 0;

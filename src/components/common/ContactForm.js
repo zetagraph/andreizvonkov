@@ -126,9 +126,8 @@ const Form = styled.div`
   button {
     display: block;
     width: 100%;
-    margin-bottom: 2rem;
     padding: 2rem 1rem;
-    background-color: #eee;
+    border: 2px solid var(--yellow);
     font-size: 1.8rem;
     font-weight: 400;
     color: #666;

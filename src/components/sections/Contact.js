@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ContactForm from './../common/ContactForm'
+import Up from '../common/Up'
 
 const Contact = () => (
   <Section id="contact">
@@ -38,16 +39,22 @@ const Contact = () => (
         <ContactForm />
       </FormContainer>
     </Container>
+    <Up />
   </Section>
 )
 
 const Section = styled.section`
+  position: relative;
+  padding-top: 8rem;
+
   @media screen and (min-width: 900px) {
     padding: 10rem 0 16rem 0;
   }
 `
 
 const Container = styled.div`
+  padding-bottom: 7rem;
+
   @media (min-width: ${props => props.theme.screen.lg}) {
     max-width: 2000px;
     display: grid;

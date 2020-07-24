@@ -29,7 +29,7 @@ const fadeUp = keyframes`
 `
 
 const Section = styled.section`
-  padding: 4rem 2rem 2rem;
+  padding: 10rem 2rem 4rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     padding: 8rem 0 16rem 0;

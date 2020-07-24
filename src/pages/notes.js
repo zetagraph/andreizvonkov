@@ -55,7 +55,7 @@ const fadeUp = keyframes`
 const Container = styled.div`
   opacity: 0;
   transform: translateY(100px);
-  padding: 4rem 2rem 2rem;
+  padding: 8rem 2rem 2rem;
   margin-bottom: 4rem;
 
   animation: ${fadeUp} 1s 0.1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
