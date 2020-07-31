@@ -45,7 +45,7 @@ const Container = styled.div`
 
 const CopyRight = styled.div`
   font-size: 1.4rem;
-  color: #999;
+  color: #767676;
 `
 
 const SocialIcons = styled.div`
