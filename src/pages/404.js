@@ -14,8 +14,7 @@ const NotFoundPage = ({ data, location }) => {
       <SEO title="404: Not Found" />
       <Header />
       <Container>
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        <Title>Not Found</Title>
       </Container>
       <Footer />
     </Layout>
@@ -23,11 +22,24 @@ const NotFoundPage = ({ data, location }) => {
 }
 
 const Container = styled.div`
-  padding: 4rem 2rem 2rem;
-
+  padding: 10rem 2rem 2rem;
+  min-height: 40rem;
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     padding: 14rem 10rem 0 14rem;
+    min-height: 50rem;
+  }
+`
+
+const Title = styled.h1`
+  margin-bottom: 4rem;
+  font-size: 4rem;
+  font-weight: 200;
+  line-height: 1.3;
+  color: #929292;
+
+  @media (min-width: ${props => props.theme.screen.lg}) {
+    font-size: calc(3rem + 2vw);
   }
 `
 
