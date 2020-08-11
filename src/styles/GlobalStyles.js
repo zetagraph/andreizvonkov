@@ -170,7 +170,7 @@ a {
   font-size: 2.6rem;
   line-height: 1;
   font-weight: 600;
-  color: #ccc;
+  color: #767676;
 
   &:before {
     position: absolute;
@@ -191,6 +191,7 @@ a {
     writing-mode: vertical-rl;
     font-size: 2.8rem;
     font-weight: 600;
+    color: #ccc;
 
     &:before {
       position: absolute;
