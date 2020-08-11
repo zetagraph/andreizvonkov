@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from 'styled-components'
 import Header from '../components/common/Header'
-
+import Footer from '../components/common/Footer'
 import Layout from "../components/common/Layout"
 import SEO from "../components/common/SEO"
 
@@ -17,6 +17,7 @@ const NotFoundPage = ({ data, location }) => {
         <h1>Not Found</h1>
         <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
       </Container>
+      <Footer />
     </Layout>
   )
 }
