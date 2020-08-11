@@ -14,7 +14,7 @@ const Intro = () => (
         </LineThree>
       </Title>
       <SubTitle>
-        Hello, my name is Andrei. I design and build <strong>fast</strong>,
+        Hello, my name is Andrei. I design and build <strong>fast</strong>, &amp;
         <strong>accessible</strong> and <strong>easy</strong> to use websites.
       </SubTitle>
     </Container>
