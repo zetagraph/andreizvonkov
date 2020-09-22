@@ -7,7 +7,7 @@ import { Link as GatsbyLink } from 'gatsby'
 const Header = () => {
   return (
     <div id="top">
-      <HeaderWrap >
+      <HeaderWrap>
         <Container>
           <Brand to="/">
             Andrei Zvonkov <span className="dot"></span> <span>UX</span>{' '}
@@ -46,7 +46,7 @@ const HeaderWrap = styled.header`
   width: 100%;
   top: 0;
   left: 0;
-  right:0;
+  right: 0;
   z-index: 1;
   background-color: var(--white);
 

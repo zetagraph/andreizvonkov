@@ -143,7 +143,7 @@ const Item = styled.div`
     right: 2rem;
     top: 2rem;
     color: #f5f5f5;
-    font-size: 6rem;
+    font-size: 8rem;
     font-weight: 700;
     line-height: 1;
   }
@@ -166,7 +166,7 @@ const Item = styled.div`
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     margin: 0;
-    padding: 10rem 2rem 4rem 4rem;
+    padding: 14rem 2rem 4rem 4rem;
     grid-row: 2 / span 1;
     grid-column: span 2;
     border-top: 0;
@@ -179,7 +179,7 @@ const Item = styled.div`
     }
 
     &:before {
-      right: 2rem;
+      right: 3rem;
       top: 0;
     }
   }
@@ -188,7 +188,7 @@ const Item = styled.div`
 const ItemTitle = styled.h2`
   position: relative;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
