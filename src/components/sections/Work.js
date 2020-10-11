@@ -55,6 +55,14 @@ const Work = () => (
             }
           }
         }
+        screen4: file(relativePath: { eq: "bgd.png" }) {
+          id
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -157,6 +165,30 @@ const Work = () => (
             <span>
               <Img
                 fluid={data.screen2.childImageSharp.fluid}
+                alt="Website Screenshot"
+              />
+            </span>
+          </ItemScreenshot>
+          <ItemDetails>
+            <ItemDetailTitle>Bureau of Good Design</ItemDetailTitle>
+            <ItemDetailNote>Self Initiated Project</ItemDetailNote>
+            <List>
+              <ListItem>Branding & Design</ListItem>
+              <ListItem>Front-End Development</ListItem>
+              <ListItem>React, Gatsby</ListItem>
+            </List>
+            <a href="https://bureauofgood.design">Visit</a>
+          </ItemDetails>
+          <ItemScreenshot
+            data-sal="fade"
+            data-sal-delay="100"
+            data-sal-duration="700"
+            data-sal-easing="ease"
+          >
+            <ItemScreenshotChrome>•••</ItemScreenshotChrome>
+            <span>
+              <Img
+                fluid={data.screen4.childImageSharp.fluid}
                 alt="Website Screenshot"
               />
             </span>
