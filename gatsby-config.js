@@ -60,7 +60,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Andrei Zvonkov - UX Designer`,
+        name: `Andrei Zvonkov - UX Designer / Front-End Developer`,
         short_name: `AZ - UX`,
         start_url: `/`,
         background_color: `#fff`,
