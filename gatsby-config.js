@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Andrei Zvonkov - UX Designer`,
+    title: `Andrei Zvonkov - UX Designer / Front-End Developer`,
     author: {
       name: `Andrei Zvonkov - UX Designer`,
       summary: `I design and build fast, accessible and easy to use websites and mobile applications.`,
     },
-    description: `Personal Portfolio of Andrei Zvonkov - UX Designer.`,
+    description: `Personal Portfolio of Andrei Zvonkov - UX Designer / Front-End Developer.`,
     siteUrl: `https://netlify.com/`,
     social: {
       twitter: `zetagraph`,

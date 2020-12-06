@@ -2,14 +2,14 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 const SEO_DATA = {
-  description: "Andrei Zvonkov - UX Designer",
-  title: "Andrei Zvonkov - UX Designer",
-  url: "",
-  author: "",
-  keywords: ["Portfolio", "Design", "UX", "Web Development"],
-  img: "",
-  twitterId: "@zetagraph",
-  facebookId: "",
+  description: 'Andrei Zvonkov - UX Designer / Front-End Drupal Developer',
+  title: 'Andrei Zvonkov - UX Designer / Front-End Drupal Developer',
+  url: '',
+  author: '',
+  keywords: ['Portfolio', 'Design', 'UX', 'Web Development', 'Drupal', 'React'],
+  img: '',
+  twitterId: '@zetagraph',
+  facebookId: '',
 }
 
 const SEO = () => {
