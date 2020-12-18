@@ -10,8 +10,8 @@ const Header = () => {
       <HeaderWrap>
         <Container>
           <Brand to="/">
-            Andrei Zvonkov <span className="dot"></span> <span>UX</span>{' '}
-            Designer
+            Andrei Zvonkov <span className="dot"></span> <span>UX </span>
+             Engineer
           </Brand>
           <Nav />
           <MobileNav />
