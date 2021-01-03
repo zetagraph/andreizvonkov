@@ -45,23 +45,22 @@ const About = () => (
           </Photo>
           <Details>
             <Name>
-              Andrei Zvonkov &middot; <strong>UX</strong> Designer
+              <strong>UX</strong> Engineer &middot; Front End Developer
             </Name>
             <Description>
-              <p>I've been making websites for the past 20 years.</p>
               <p>
-                I help companies and organizations improve design, usability and performance of
-                their sites.
+                I've been helping companies and organizations improve{' '}
+                <strong>design</strong>, <strong>usability</strong> and{' '}
+                <strong>performance</strong> of their sites for the past 20
+                years.
               </p>
               <p>
-                I try to deliver value by making functional, simple to use
-                and accessible sites.
+                I try to deliver value by making <strong>functional</strong>,{' '}
+                <strong>simple to use</strong> and <strong>accessible</strong>{' '}
+                sites.
               </p>
               <p>
-                I am currently working as a UX Designer / Front-End Developer at{' '}
-                <ExternalLink href="https://fosterinteractive.com">
-                  Foster Interactive
-                </ExternalLink>. I am based in London, ON, Canada.
+                I am based in London, ON, Canada.
               </p>
             </Description>
           </Details>
@@ -144,6 +143,11 @@ const Description = styled.div`
     &:not(:last-child) {
       margin-bottom: 2rem;
     }
+  }
+
+  strong {
+    font-weight: 500;
+    color: var(--black);
   }
 
   a {
