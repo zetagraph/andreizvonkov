@@ -6,7 +6,7 @@ module.exports = {
       summary: `I design and build fast, accessible and easy to use websites and mobile applications.`,
     },
     description: `Personal Portfolio of Andrei Zvonkov - UX Designer / Front-End Developer.`,
-    siteUrl: `https://netlify.com/`,
+    siteUrl: `https://andreizvonkov.com`,
     social: {
       twitter: `zetagraph`,
     },
@@ -39,8 +39,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/notes`,
-        name: `notes`,
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
       },
     },
     {
@@ -61,7 +61,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Andrei Zvonkov - UX Designer / Front-End Developer`,
-        short_name: `AZ - UX`,
+        short_name: `Andrei Zvonkov`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#000`,
