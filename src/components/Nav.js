@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import NavList from '../Header/NavList'
+import NavList from './NavList'
 
 const Nav = () => (
     <Container>

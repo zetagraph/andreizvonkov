@@ -1,5 +1,5 @@
 import React from 'react'
-import useToggler from '../useToggler'
+import useToggler from './useToggler'
 import styled from 'styled-components'
 import { Link as GatsbyLink } from 'gatsby'
 

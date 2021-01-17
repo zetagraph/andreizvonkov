@@ -17,7 +17,7 @@ const NavList = () => (
       <NavLink to="/#contact">Contact</NavLink>
     </NavItem>
     <NavItem>
-      <NavLink to="/notes">Notes</NavLink>
+      <NavLink to="/blog">Blog</NavLink>
     </NavItem>
   </NavItems>
 )

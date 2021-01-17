@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
-import ExternalLink from '../common/ExternalLink'
 
 import Img from 'gatsby-image'
 

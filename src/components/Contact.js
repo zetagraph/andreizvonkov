@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import ContactForm from './../common/ContactForm'
-import Up from '../common/Up'
+import ContactForm from './ContactForm'
+import Up from './Up'
 
 const Contact = () => (
   <Section id="contact">

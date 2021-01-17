@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
-import theme from '../../../styles/theme'
-import GlobalStyles from '../../../styles/GlobalStyles'
-import SEO from '../SEO'
+import theme from '../styles/theme'
+import GlobalStyles from '../styles/GlobalStyles'
+import Seo from './Seo'
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
-      <SEO />
+      <Seo />
       <GlobalStyles />
       {children}
     </>

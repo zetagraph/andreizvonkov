@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { ReactComponent as PfizerLogo } from '../../images/logos/pfizer.svg'
-import { ReactComponent as FoxLogo } from '../../images/logos/fox.svg'
-import { ReactComponent as AgropurLogo } from '../../images/logos/agropur.svg'
-import { ReactComponent as NineElevenMemorialLogo } from '../../images/logos/nine-eleven-memorial.svg'
+import { ReactComponent as PfizerLogo } from '../images/logos/pfizer.svg'
+import { ReactComponent as FoxLogo } from '../images/logos/fox.svg'
+import { ReactComponent as AgropurLogo } from '../images/logos/agropur.svg'
+import { ReactComponent as NineElevenMemorialLogo } from '../images/logos/nine-eleven-memorial.svg'
 
 const LOGOS = [
   {
