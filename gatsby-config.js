@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Andrei Zvonkov - UX Designer / Front-End Developer`,
+    title: `Andrei Zvonkov - UX Designer / Front-End Drupal Developer`,
     author: {
-      name: `Andrei Zvonkov - UX Designer`,
+      name: `Andrei Zvonkov - UX Designer / Front-End Drupal Developer`,
       summary: `I design and build fast, accessible and easy to use websites and mobile applications.`,
     },
-    description: `Personal Portfolio of Andrei Zvonkov - UX Designer / Front-End Developer.`,
+    description: `Personal Portfolio of Andrei Zvonkov - UX Designer / Front-End Drupal Developer.`,
     siteUrl: `https://andreizvonkov.com`,
     social: {
       twitter: `zetagraph`,
@@ -13,34 +13,10 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_self',
-              rel: 'nofollow',
-            },
-          },
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content`,
+        name: `content`,
       },
     },
     {
@@ -57,6 +33,23 @@ module.exports = {
         path: `${__dirname}/src/images/about`,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
