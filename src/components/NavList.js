@@ -5,7 +5,7 @@ import { Link as GatsbyLink } from 'gatsby'
 const NavList = () => (
   <NavItems>
     <NavItem>
-      <NavLink to="/#experience">Experience</NavLink>
+      <NavLink to="/#expertise">Expertise</NavLink>
     </NavItem>
     <NavItem>
       <NavLink to="/#work">Work</NavLink>
@@ -14,10 +14,12 @@ const NavList = () => (
       <NavLink to="/#about">About</NavLink>
     </NavItem>
     <NavItem>
-      <NavLink to="/#contact">Contact</NavLink>
+      <NavLink to="/blog" activeClassName="active">
+        Blog
+      </NavLink>
     </NavItem>
     <NavItem>
-      <NavLink to="/blog">Blog</NavLink>
+      <NavLink to="/#contact">Work With Me</NavLink>
     </NavItem>
   </NavItems>
 )
@@ -45,6 +47,22 @@ const NavItem = styled.li`
     top: 30%;
     color: #ccc;
   }
+
+  &:last-of-type a {
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: -32px;
+      right: 50%;
+      width: 20px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 7px 0 7px;
+      border-color: var(--yellow) transparent transparent transparent;
+    }
+  }
 `
 
 const NavLink = styled(GatsbyLink)`
@@ -52,8 +70,7 @@ const NavLink = styled(GatsbyLink)`
   display: inline-block;
   font-size: 1.6rem;
   padding: 0 0 0.25rem;
-  color: #333;
-  opacity: 0.7;
+  color: var(--grey-2);
   transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
 
   &:after {
@@ -71,10 +88,11 @@ const NavLink = styled(GatsbyLink)`
   }
 
   &:hover {
-    opacity: 1;
+    color: var(--grey-1);
   }
 
-  &:hover:after {
+  &:hover:after,
+  &.active:after {
     --scale: 1;
   }
 
@@ -82,4 +100,5 @@ const NavLink = styled(GatsbyLink)`
     font-size: 1.8rem;
   }
 `
+
 export default NavList

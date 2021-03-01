@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
-
 import Img from 'gatsby-image'
+import Typewriter from 'typewriter-effect'
+
 
 const About = () => (
   <StaticQuery
@@ -44,8 +45,15 @@ const About = () => (
           </Photo>
           <Details>
             <Name>
-              <strong>UX</strong> Engineer &middot; Front End Developer
+              <strong>Andrei</strong> Zvonkov
             </Name>
+            <Typewriter
+              options={{
+                strings: ['UX Designer', 'Front End Dev', 'Drupal Dev'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
             <Description>
               <p>
                 I've been helping companies and organizations improve{' '}
@@ -58,9 +66,7 @@ const About = () => (
                 <strong>simple to use</strong> and <strong>accessible</strong>{' '}
                 sites.
               </p>
-              <p>
-                I am based in London, ON, Canada.
-              </p>
+              <p>I am based in London, ON, Canada.</p>
             </Description>
           </Details>
         </Container>
@@ -117,6 +123,7 @@ const Details = styled.div`
 
 const Name = styled.div`
   position: relative;
+  display: inline-block;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   font-size: 3rem;
@@ -134,10 +141,14 @@ const Name = styled.div`
   }
 `
 
+// const Typewriter = styled.div`
+//   display: inline-block;
+// `
+
 const Description = styled.div`
   p {
     font-weight: 300;
-    color: #727272;
+    color: var(--grey-2);
 
     &:not(:last-child) {
       margin-bottom: 2rem;

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import ExternalLink from './ExternalLink'
+import ExternalLink from './externalLink'
 
 import { ReactComponent as GitHubIcon } from '../images/icons/github.svg'
 
@@ -30,7 +30,7 @@ const Footer = () => (
 )
 
 const FooterWrap = styled.footer`
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--white-2);
 `
 
 const Container = styled.div`
@@ -45,7 +45,7 @@ const Container = styled.div`
 
 const CopyRight = styled.div`
   font-size: 1.4rem;
-  color: #767676;
+  color: var(--grey-1);
 `
 
 const SocialIcons = styled.div`
@@ -57,7 +57,7 @@ const SocialIcons = styled.div`
 
     &:hover {
       svg {
-        fill: #757575;
+        fill: var(--grey-1);
       }
     }
   }

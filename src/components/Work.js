@@ -298,7 +298,7 @@ const ItemDetailTitle = styled.div`
 const ItemDetailNote = styled.div`
   margin-bottom: 2rem;
   font-size: 1.8rem;
-  color: #757575;
+  color: var(--grey-1);
 `
 
 const List = styled.ul`
@@ -308,13 +308,13 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   padding: 1.5rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--white-2);
   font-size: 2rem;
   font-weight: 300;
-  color: #757575;
+  color: var(--grey-1);
 
   &:first-child {
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--white-2);
   }
 `
 

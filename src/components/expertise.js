@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Experience = () => (
-  <Section id="experience">
+const Expertise = () => (
+  <Section id="expertise">
     <div
       className="divider-line"
       data-sal="slide-right"
@@ -11,7 +11,7 @@ const Experience = () => (
       data-sal-easing="ease"
     ></div>
     <div className="section-title-container">
-      <h2 className="section-title">Experience</h2>
+      <h2 className="section-title">Expertise</h2>
     </div>
 
     <Container>
@@ -112,6 +112,7 @@ const HeaderTitle = styled.h2`
   font-size: 2.4rem;
   font-weight: 200;
   line-height: 1.2;
+  color: var(--grey-2);
 
   strong {
     color: var(--black);
@@ -123,15 +124,14 @@ const HeaderTitle = styled.h2`
     max-width: 75rem;
     margin: 0;
     padding: 0 0 18rem 4rem;
-    border-left: 1px solid #eee;
-    color: #727272;
+    border-left: 1px solid var(--white-2);
     font-size: calc(3rem + 2vw);
   }
 `
 
 const Item = styled.div`
   position: relative;
-  border: 1px solid #eee;
+  border: 1px solid var(--white-2);
   padding: 2rem;
 
   &:not(:last-child) {
@@ -216,11 +216,11 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   font-size: calc(1.5rem + 0.2vw);
-  color: #757575;
+  color: var(--grey-1);
 
   &:not(:last-child) {
     margin-bottom: 2rem;
   }
 `
 
-export default Experience
+export default Expertise

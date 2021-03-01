@@ -1,24 +1,24 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import Nav from './Nav'
-import MobileNav from './MobileNav'
+import Nav from './nav'
+import MobileNav from './mobileNav'
 import { Link as GatsbyLink } from 'gatsby'
 
 const Header = () => {
   return (
-    <div id="top">
-      <HeaderWrap>
-        <Container>
-          <Brand to="/">
-            Andrei Zvonkov <span className="dot"></span> <span>UX </span>
-             Engineer
-          </Brand>
-          <Nav />
-          <MobileNav />
-        </Container>
-        <Line />
-      </HeaderWrap>
-    </div>
+    <HeaderWrap id="top">
+      <Container>
+        <Brand to="/">
+          Andrei Zvonkov <span className="dot"></span> &nbsp;
+          {/* <span>UX </span>+ Dev  */}
+          {/* Frontend <span>UX</span> Engineer */}
+          <span>UX</span> Engineer
+        </Brand>
+        <Nav />
+        <MobileNav />
+      </Container>
+      <Line />
+    </HeaderWrap>
   )
 }
 
@@ -72,7 +72,7 @@ const Line = styled.div`
 const Container = styled.div`
   position: relative;
   padding: 2rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--white-2);
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     max-width: 2000px;
@@ -85,7 +85,7 @@ const Container = styled.div`
 `
 const Brand = styled(GatsbyLink)`
   display: block;
-  color: #727272;
+  color: var(--grey-2);
   font-size: 1.8rem;
 
   strong {

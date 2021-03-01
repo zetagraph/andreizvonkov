@@ -56,8 +56,11 @@ button {
 :root {
   --white:   #ffffff;
   --white-1: #fdfdfd;
-  --white-2: #efefef;
+  --white-2: #eeeeee;
   --white-3: #e0e0e0;
+  --grey-1:  #757575;
+  --grey-2:  #888888;
+  --grey-3:  #666666;
   --yellow:  #ffd034;
   --black:   #222222;
   --black-2: #1b1b1b;
@@ -73,7 +76,7 @@ button {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background-color: #eee;
+  background-color: var(--white-2);
 }
 ::-webkit-scrollbar-thumb {
   background-color: #ffd034;
@@ -151,6 +154,11 @@ a {
 
 
 .section-title-container {
+
+  .blog-wrap & {
+    display: none;
+  }
+
   @media (min-width: ${props => props.theme.screen.lg}) {
     display: block;
     position: sticky;
@@ -158,8 +166,9 @@ a {
     right: 0;
     top: 0;
 
-    &.notes {
-      top: 31%;
+    .blog-wrap & {
+      display: block;
+      top: 33%;
     }
   }
 }
@@ -167,10 +176,11 @@ a {
 .section-title {
   position: relative;
   padding-left: 4rem;
+  white-space: nowrap;
   font-size: 2.6rem;
   line-height: 1;
   font-weight: 600;
-  color: #767676;
+  color: var(--grey-1);
 
   &:before {
     position: absolute;

@@ -21,8 +21,8 @@ const MobileNav = () => {
 
       <MobileNavWrap aria-expanded={show} open={show}>
         <MobileNavItem>
-          <MobileNavLink to="/#experience" onClick={toggle}>
-            Experience
+          <MobileNavLink to="/#expertise" onClick={toggle}>
+            Expertise
           </MobileNavLink>
         </MobileNavItem>
         <MobileNavItem>
@@ -37,11 +37,11 @@ const MobileNav = () => {
         </MobileNavItem>
         <MobileNavItem>
           <MobileNavLink to="/#contact" onClick={toggle}>
-            Contact
+            Work With Me
           </MobileNavLink>
         </MobileNavItem>
         <MobileNavItem>
-          <MobileNavLink to="/notes">Notes</MobileNavLink>
+          <MobileNavLink to="/blog">Blog</MobileNavLink>
         </MobileNavItem>
       </MobileNavWrap>
     </>

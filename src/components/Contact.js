@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import ContactForm from './ContactForm'
-import Up from './Up'
+import ContactForm from './contactForm'
+import Up from './up'
 
 const Contact = () => (
   <Section id="contact">
@@ -13,11 +13,11 @@ const Contact = () => (
       data-sal-easing="ease"
     ></div>
     <div className="section-title-container">
-      <h2 className="section-title">Contact</h2>
+      <h2 className="section-title">Work With Me</h2>
     </div>
     <Container>
-      <ContactContent>
-        <ContactTitle>Get in Touch</ContactTitle>
+      <Content>
+        <Title>Let's Work Together</Title>
         <p>
           Please feel free to get in touch by using the form or just send me an{' '}
           <a href="mailto:zvonkov@gmail.com">Email</a>.
@@ -29,7 +29,7 @@ const Contact = () => (
           &nbsp;
           <a href="https://www.linkedin.com/in/andreizvonkov">LinkedIn</a>.
         </p>
-      </ContactContent>
+      </Content>
       <FormContainer
         data-sal="slide-up"
         data-sal-delay="100"
@@ -72,13 +72,13 @@ const FormContainer = styled.div`
   }
 `
 
-const ContactTitle = styled.div`
+const Title = styled.div`
   position: relative;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   font-size: 3rem;
   font-weight: 200;
-  line-height: 1;
+  line-height: 1.25;
 
   &:after {
     position: absolute;
@@ -91,12 +91,12 @@ const ContactTitle = styled.div`
   }
 `
 
-const ContactContent = styled.div`
+const Content = styled.div`
   padding: 4rem 2rem 2rem;
 
   p {
     font-weight: 300;
-    color: #727272;
+    color: var(--grey-2);
 
     &:not(:last-child) {
       margin-bottom: 2rem;

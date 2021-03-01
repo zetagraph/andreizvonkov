@@ -91,8 +91,8 @@ const Form = styled.div`
     margin-bottom: 2rem;
     padding: 2rem 1rem;
     font-size: 1.8rem;
-    color: #757575;
-    border: 1px solid #eee;
+    color: var(--grey-1);
+    border: 1px solid var(--white-2);
     transition: 0.5s all;
 
     &:focus {
@@ -100,7 +100,7 @@ const Form = styled.div`
     }
 
     &::placeholder {
-      color: #757575;
+      color: var(--grey-1);
     }
   }
 
@@ -112,8 +112,8 @@ const Form = styled.div`
     padding: 2rem 1rem;
     border: 1px solid #ccc;
     font-size: 1.8rem;
-    border: 1px solid #eee;
-    color: #757575;
+    border: 1px solid var(--white-2);
+    color: var(--grey-1);
     font-family: inherit;
     font-size: inherit;
     transition: 0.5s all;

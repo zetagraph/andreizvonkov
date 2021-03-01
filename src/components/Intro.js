@@ -48,7 +48,7 @@ const Title = styled.h1`
   font-weight: 100;
   line-height: 1;
   margin-bottom: 3rem;
-  color: #727272;
+  color: var(--grey-2);
 
   span {
     font-weight: 700;
@@ -83,7 +83,7 @@ const SubTitle = styled.div`
   font-size: 2.4rem;
   line-height: 1.3;
   font-weight: 300;
-  color: #727272;
+  color: var(--grey-2);
   opacity: 0;
   animation: ${fadeUp} 1s 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   transform: translateY(100px);
@@ -95,7 +95,7 @@ const SubTitle = styled.div`
   @media (min-width: ${props => props.theme.screen.lg}) {
     font-size: 3.2rem;
     max-width: 84rem;
-    color: #727272;
+    color: var(--grey-2);
   }
 `
 
