@@ -61,7 +61,7 @@ To make it easier, we can automate these optimization processes incorporating an
 
 ### Properly sizing images
 
-Use [**responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)** with <img srcset>, <picture> and Media Queries to load appropriate sizes depending on device resolution.
+Use [**responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) with `<img srcset>`, `<picture>` and Media Queries to load appropriate sizes depending on device resolution.
 
 ### Using a CDN
 
