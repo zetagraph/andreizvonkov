@@ -47,13 +47,15 @@ const About = () => (
             <Name>
               <strong>Andrei</strong> Zvonkov
             </Name>
-            <Typewriter
-              options={{
-                strings: ['UX Designer', 'Front End Dev', 'Drupal Dev'],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+            <TypewriterWrap>
+              <Typewriter
+                options={{
+                  strings: ['UX Designer', 'Front End Dev', 'Drupal Dev'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </TypewriterWrap>
             <Description>
               <p>
                 I've been helping companies and organizations improve{' '}
@@ -141,9 +143,11 @@ const Name = styled.div`
   }
 `
 
-// const Typewriter = styled.div`
-//   display: inline-block;
-// `
+const TypewriterWrap = styled.div`
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: var(--grey-2);
+`
 
 const Description = styled.div`
   p {
