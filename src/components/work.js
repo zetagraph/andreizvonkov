@@ -177,7 +177,7 @@ const Work = () => (
               <ListItem>Front-End Development</ListItem>
               <ListItem>React, Gatsby</ListItem>
             </List>
-            <a href="https://bureauofgood.design">Visit</a>
+            <a href="https://vigilant-kirch-18292c.netlify.app">Visit</a>
           </ItemDetails>
           <ItemScreenshot
             data-sal="fade"
