@@ -31,7 +31,7 @@ const Work = () => (
   <StaticQuery
     query={graphql`
       query {
-        screen1: file(relativePath: { eq: "cheesebar.png" }) {
+        lullabot: file(relativePath: { eq: "lullabot.png" }) {
           id
           childImageSharp {
             fluid {
@@ -39,7 +39,7 @@ const Work = () => (
             }
           }
         }
-        screen2: file(relativePath: { eq: "la-houlette-de-vie-bakery.png" }) {
+        cheesebar: file(relativePath: { eq: "cheesebar.png" }) {
           id
           childImageSharp {
             fluid {
@@ -47,7 +47,7 @@ const Work = () => (
             }
           }
         }
-        screen3: file(relativePath: { eq: "nine-eleven-memorial.png" }) {
+        homeSophos: file(relativePath: { eq: "home-sophos.png" }) {
           id
           childImageSharp {
             fluid {
@@ -55,7 +55,17 @@ const Work = () => (
             }
           }
         }
-        screen4: file(relativePath: { eq: "bgd.png" }) {
+        nineElevenMemorial: file(
+          relativePath: { eq: "nine-eleven-memorial.png" }
+        ) {
+          id
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        bgd: file(relativePath: { eq: "bgd.png" }) {
           id
           childImageSharp {
             fluid {
@@ -88,17 +98,43 @@ const Work = () => (
             <strong>usability</strong> and <strong>accessibility</strong> of
             their sites.
           </HeaderTitle>
+
+          <ItemDetails>
+            <ItemDetailTitle>Lullabot</ItemDetailTitle>
+            <ItemDetailNote>
+              Site redesign and prototype work
+            </ItemDetailNote>
+            <List>
+              <ListItem>UX/UI Design</ListItem>
+              <ListItem>Front-End Development</ListItem>
+              <ListItem>React, Next.js</ListItem>
+            </List>
+            <a href="https://www.lullabot.com">Visit</a>
+          </ItemDetails>
+          <ItemScreenshot
+            data-sal="fade"
+            data-sal-delay="100"
+            data-sal-duration="700"
+            data-sal-easing="ease"
+          >
+            <ItemScreenshotChrome>•••</ItemScreenshotChrome>
+            <span>
+              <Img
+                fluid={data.lullabot.childImageSharp.fluid}
+                alt="Website Screenshot"
+              />
+            </span>
+          </ItemScreenshot>
+
           <ItemDetails>
             <ItemDetailTitle>Cheesebar</ItemDetailTitle>
             <ItemDetailNote>
-              A site for Agropur Dairy Cooperative <br />
-              (appnovation.com project)
+              Agropur Dairy Cooperative
             </ItemDetailNote>
             <List>
+              <ListItem>UX/UI Design</ListItem>
               <ListItem>Front-End Development</ListItem>
-              <ListItem>HTML, CSS, JS</ListItem>
-              <ListItem>Animations</ListItem>
-              <ListItem>Drupal Theming</ListItem>
+              <ListItem>Drupal, TWIG, CSS, JS, Animations</ListItem>
             </List>
             <a href="https://www.cheesebar.ca">Visit</a>
           </ItemDetails>
@@ -111,24 +147,21 @@ const Work = () => (
             <ItemScreenshotChrome>•••</ItemScreenshotChrome>
             <span>
               <Img
-                fluid={data.screen1.childImageSharp.fluid}
+                fluid={data.cheesebar.childImageSharp.fluid}
                 alt="Website Screenshot"
               />
             </span>
           </ItemScreenshot>
 
           <ItemDetails>
-            <ItemDetailTitle>9/11 Memorial</ItemDetailTitle>
-            <ItemDetailNote>
-              A site for 9/11 Memorial &amp; Museum <br />
-              (appnovation.com project)
-            </ItemDetailNote>
+            <ItemDetailTitle>Sophos</ItemDetailTitle>
+            <ItemDetailNote>Cybersecurity for Home Users</ItemDetailNote>
             <List>
+              <ListItem>UX/UI Design</ListItem>
               <ListItem>Front-End Development</ListItem>
-              <ListItem>HTML, CSS, JS</ListItem>
-              <ListItem>Drupal Theming</ListItem>
+              <ListItem>Drupal, TWIG, CSS, JS</ListItem>
             </List>
-            <a href="https://www.911memorial.org">Visit</a>
+            <a href="https://home.sophos.com">Visit</a>
           </ItemDetails>
           <ItemScreenshot
             data-sal="fade"
@@ -139,36 +172,12 @@ const Work = () => (
             <ItemScreenshotChrome>•••</ItemScreenshotChrome>
             <span>
               <Img
-                fluid={data.screen3.childImageSharp.fluid}
+                fluid={data.homeSophos.childImageSharp.fluid}
                 alt="Website Screenshot"
               />
             </span>
           </ItemScreenshot>
 
-          <ItemDetails>
-            <ItemDetailTitle>La Houlette de vie Bakery</ItemDetailTitle>
-            <ItemDetailNote>A site for a local Bakery</ItemDetailNote>
-            <List>
-              <ListItem>Branding & Design</ListItem>
-              <ListItem>Front-End Development</ListItem>
-              <ListItem>HTML, CSS, JS</ListItem>
-            </List>
-            <a href="https://lahoulettebakery.com">Visit</a>
-          </ItemDetails>
-          <ItemScreenshot
-            data-sal="fade"
-            data-sal-delay="100"
-            data-sal-duration="700"
-            data-sal-easing="ease"
-          >
-            <ItemScreenshotChrome>•••</ItemScreenshotChrome>
-            <span>
-              <Img
-                fluid={data.screen2.childImageSharp.fluid}
-                alt="Website Screenshot"
-              />
-            </span>
-          </ItemScreenshot>
           <ItemDetails>
             <ItemDetailTitle>Bureau of Good Design</ItemDetailTitle>
             <ItemDetailNote>Self Initiated Project</ItemDetailNote>
@@ -188,7 +197,7 @@ const Work = () => (
             <ItemScreenshotChrome>•••</ItemScreenshotChrome>
             <span>
               <Img
-                fluid={data.screen4.childImageSharp.fluid}
+                fluid={data.bgd.childImageSharp.fluid}
                 alt="Website Screenshot"
               />
             </span>
