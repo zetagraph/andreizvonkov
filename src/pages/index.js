@@ -6,6 +6,7 @@ import Intro from '../components/intro'
 import Expertise from '../components/expertise'
 import Work from '../components/work'
 import About from '../components/about'
+import Testimonials from '../components/testimonials'
 import Contact from '../components/contact'
 import Footer from '../components/footer'
 
@@ -18,6 +19,7 @@ const IndexPage = () => (
       <Expertise />
       <Work />
       <About />
+      <Testimonials />
       <Contact />
     </main>
     <Footer />
