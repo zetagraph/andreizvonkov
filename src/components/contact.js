@@ -48,7 +48,7 @@ const Section = styled.section`
   padding-top: 8rem;
 
   @media screen and (min-width: 900px) {
-    padding: 10rem 0 16rem 0;
+    padding: 14rem 0 16rem 0;
   }
 `
 

@@ -83,7 +83,7 @@ const Section = styled.section`
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     padding-top: 0;
-    padding-bottom: 16rem;
+    padding-bottom: 14rem;
   }
 `
 const Container = styled.div`
