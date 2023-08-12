@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled, { keyframes } from 'styled-components'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <Seo title="All posts" />
       <Header />
       <div className="blog-wrap">
         <div className="section-title-container">
@@ -159,7 +159,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
       nodes {
         excerpt
         fields {
