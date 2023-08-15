@@ -70,13 +70,18 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-svgr`,
-    },
-    {
       resolve: `gatsby-plugin-offline`,
     },
     {
       resolve: `gatsby-plugin-styled-components`,
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /images/,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-scroll-reveal`,
