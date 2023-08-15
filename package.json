@@ -8,7 +8,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@svgr/webpack": "^v7.0.0",
     "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.11.0",
     "gatsby-image": "^3.11.0",
@@ -16,6 +15,7 @@
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-offline": "^6.11.0",
     "gatsby-plugin-react-helmet": "^6.11.0 ",
+    "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-scroll-reveal": "^0.0.7 ",
     "gatsby-plugin-sharp": "^5.11.0",
     "gatsby-plugin-styled-components": "^6.11.0",
