@@ -86,7 +86,7 @@ const Burger = styled.button`
     }
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     display: none;
   }
 `
@@ -108,7 +108,7 @@ const MobileNavWrap = styled.ul`
   transition: transform 0.3s ease-in-out;
   z-index: 1;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     display: none;
   }
 `

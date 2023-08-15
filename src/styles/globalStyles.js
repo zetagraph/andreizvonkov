@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import bgImg from '../images/backgrounds/A.svg'
 
 const GlobalStyles = createGlobalStyle`
 
@@ -112,12 +111,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     background-image: linear-gradient(to right, #f5f5f5 6rem, #fff 6rem);
 
       &:before {
       content: '';
-      background-image: url(${bgImg});
+      background-image: url(../backgrounds/A.svg);
       background-repeat: no-repeat;
       background-position: -500% 90%;
       background-size: 110%;
@@ -159,7 +158,7 @@ a {
     display: none;
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     display: block;
     position: sticky;
     left: 0;
@@ -192,7 +191,7 @@ a {
     background-color: var(--yellow);
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     position: absolute;
     right: 2rem;
     top: 0;
@@ -216,7 +215,7 @@ a {
 }
 
 .divider-line {
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     height: 2px;
     width: 120px;
     background-color: var(--yellow);

@@ -143,8 +143,9 @@ const Form = styled.div`
   .Form_Success_Message {
     padding: 2rem;
     border: 1px solid #32a852;
+    background-color: #32a852;
     font-size: 1.8rem;
-    color: #32a852;
+    color: #fff;
   }
 
   .Form_Error_Message {

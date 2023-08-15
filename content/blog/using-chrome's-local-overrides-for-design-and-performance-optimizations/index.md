@@ -1,6 +1,6 @@
 ---
 title: Using Chrome’s Local Overrides for design and performance optimizations
-date: "2018-07-12"
+date: '2018-07-12'
 description: Chrome (65) DevTools has a great new feature called Local Overrides. It allows overriding CSS, JS and DOM on any live site.
 ---
 
@@ -20,7 +20,7 @@ Open the **Sources** panel and select the **Overrides** tab.
 
 ![](https://cdn-images-1.medium.com/max/2614/1*dCf92sygUiPd0-LzLvhOZw.jpeg)
 
-Make sure **Local Overrides **is ****checked. Network tab should show an indicator.
+Make sure **Local Overrides **is \*\*\*\*checked. Network tab should show an indicator.
 
 ![](https://cdn-images-1.medium.com/max/2828/1*ted-Jn7vKC9EKtH0gMIxHA.jpeg)
 

@@ -19,12 +19,12 @@ const BlogIndex = ({ data, location }) => {
           <h2 className="section-title">Blog</h2>
         </div>
         <BlogIntro>
-          Notes and Links on <span>Performance</span> /
-          <span> Drupal</span>  / <span>React</span> / Tech in general.
+          Notes and Links on <span>Performance</span> /<span> Drupal</span> /{' '}
+          <span>React</span> / Tech in general.
         </BlogIntro>
         <Container>
           <Posts>
-            {posts.map(post => {
+            {posts.map((post) => {
               const title = post.frontmatter.title || post.fields.slug
 
               return (
@@ -76,7 +76,7 @@ const BlogIntro = styled.div`
     color: var(--black);
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     max-width: 1000px;
     padding: 12rem 0 6rem 12rem;
     font-size: calc(3rem + 2vw);
@@ -89,13 +89,13 @@ const Container = styled.div`
   transform: translateY(100px);
   animation: ${fadeUp} 1s 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 0 0 12rem 6rem;
   }
 `
 
 const Posts = styled.div`
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     max-width: 900px;
   }
 `
@@ -111,7 +111,7 @@ const Post = styled.div`
     border-bottom: 1px solid var(--white-2);
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 6rem 0 6rem 6rem;
   }
 
@@ -126,7 +126,7 @@ const Title = styled.h2`
   font-weight: 200;
   line-height: 1.2;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     font-size: 4rem;
   }
 
@@ -145,7 +145,7 @@ const Date = styled.div`
   font-weight: 200;
   color: var(--grey-1);
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     margin-bottom: 3rem;
   }
 `
@@ -159,7 +159,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         excerpt
         fields {

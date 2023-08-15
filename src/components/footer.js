@@ -37,7 +37,7 @@ const Container = styled.div`
   align-items: center;
   padding: 2rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 3rem 2rem 3rem 12rem;
   }
 `

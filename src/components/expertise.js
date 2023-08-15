@@ -88,7 +88,7 @@ const Section = styled.section`
   position: relative;
   padding-top: 8rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding-top: 0;
     padding-bottom: 16rem;
     margin-bottom: 2rem;
@@ -97,7 +97,7 @@ const Section = styled.section`
 const Container = styled.div`
   padding: 4rem 2rem 2rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     max-width: 2000px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -118,7 +118,7 @@ const HeaderTitle = styled.h2`
     color: var(--black);
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-row: 1 / span 1;
     grid-column: 3 / span 6;
     max-width: 75rem;
@@ -164,7 +164,7 @@ const Item = styled.div`
     content: '04';
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     margin: 0;
     padding: 14rem 2rem 4rem 4rem;
     grid-row: 2 / span 1;
@@ -204,7 +204,7 @@ const ItemTitle = styled.h2`
     background-color: var(--yellow);
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     margin-bottom: 4rem;
     font-size: calc(2rem + 0.5vw);
   }

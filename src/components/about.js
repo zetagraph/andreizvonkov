@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Typewriter from 'typewriter-effect'
 
-
 const About = () => (
   <StaticQuery
     query={graphql`
@@ -19,7 +18,7 @@ const About = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Section id="about">
         <div
           className="divider-line"
@@ -81,27 +80,25 @@ const Section = styled.section`
   position: relative;
   padding-top: 8rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding-top: 0;
     padding-bottom: 14rem;
   }
 `
 const Container = styled.div`
   padding: 4rem 2rem 2rem;
-  margin-bottom: 3rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     padding: 10rem 10rem 0 6rem;
-    margin-bottom: 0;
   }
 `
 
 const Photo = styled.div`
   margin-bottom: 3rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     position: relative;
     grid-row: 1 / 1;
     grid-column: 1 / span 5;
@@ -115,7 +112,7 @@ const Photo = styled.div`
 const Details = styled.div`
   font-weight: 100;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-row: 1 / 1;
     grid-column: 7 / span 5;
     padding: 0;

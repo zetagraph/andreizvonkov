@@ -48,14 +48,14 @@ const Section = styled.section`
   padding-top: 8rem;
 
   @media screen and (min-width: 900px) {
-    padding: 14rem 0 16rem 0;
+    padding: 10rem 0 16rem 0;
   }
 `
 
 const Container = styled.div`
   padding-bottom: 7rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     max-width: 2000px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -66,7 +66,7 @@ const Container = styled.div`
 const FormContainer = styled.div`
   padding: 2rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 0;
     grid-column: 7 / span 6;
   }
@@ -112,7 +112,7 @@ const Content = styled.div`
     }
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-column: 2 / span 4;
     padding: 0;
   }

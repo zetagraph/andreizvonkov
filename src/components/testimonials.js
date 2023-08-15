@@ -17,7 +17,7 @@ const Testimonials = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Section>
         <Container>
           <Blockquote>
@@ -43,15 +43,18 @@ const Testimonials = () => (
 )
 
 const Section = styled.section`
-
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding-bottom: 4rem;
+    background-image: url(../backgrounds/quote.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 30%;
   }
 `
 const Container = styled.div`
   padding: 4rem 2rem 2rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     padding: 0 10rem 0 6rem;
@@ -59,7 +62,7 @@ const Container = styled.div`
 `
 
 const Blockquote = styled.blockquote`
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-column: 2 / span 9;
   }
 `
@@ -71,8 +74,8 @@ const BlockquoteText = styled.p`
   color: var(--grey-2);
   margin-bottom: 4rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
-    font-size: 5rem;
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
+    font-size: calc(2rem + 2vw);
   }
 
   span {

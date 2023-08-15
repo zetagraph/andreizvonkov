@@ -96,7 +96,7 @@ const NavLink = styled(GatsbyLink)`
     --scale: 1;
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     font-size: 1.8rem;
   }
 `

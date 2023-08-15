@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import PfizerLogo from "../images/logos/pfizer.svg";
+import PfizerLogo from '../images/logos/pfizer.svg'
 import FoxLogo from '../images/logos/fox.svg'
 import AgropurLogo from '../images/logos/agropur.svg'
 import NineElevenMemorialLogo from '../images/logos/nine-eleven-memorial.svg'
@@ -74,7 +74,7 @@ const Work = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Section id="work">
         <div
           className="divider-line"
@@ -100,9 +100,7 @@ const Work = () => (
 
           <ItemDetails>
             <ItemDetailTitle>Lullabot</ItemDetailTitle>
-            <ItemDetailNote>
-              Site redesign and prototype work
-            </ItemDetailNote>
+            <ItemDetailNote>Site redesign and prototype work</ItemDetailNote>
             <List>
               <ListItem>UX/UI Design</ListItem>
               <ListItem>Front-End Development</ListItem>
@@ -127,9 +125,7 @@ const Work = () => (
 
           <ItemDetails>
             <ItemDetailTitle>Cheesebar</ItemDetailTitle>
-            <ItemDetailNote>
-              Agropur Dairy Cooperative
-            </ItemDetailNote>
+            <ItemDetailNote>Agropur Dairy Cooperative</ItemDetailNote>
             <List>
               <ListItem>UX/UI Design</ListItem>
               <ListItem>Front-End Development</ListItem>
@@ -217,7 +213,7 @@ const Work = () => (
 const Section = styled.section`
   padding-top: 8rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding-top: 0;
     padding-bottom: 10rem;
     margin-bottom: 2rem;
@@ -227,7 +223,7 @@ const Section = styled.section`
 const Container = styled.div`
   padding: 4rem 0 0;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     max-width: 2000px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -249,7 +245,7 @@ const HeaderTitle = styled.h2`
     color: var(--black);
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-column: 5 / span 8;
     margin-bottom: 24rem;
     font-size: calc(3rem + 2vw);
@@ -260,7 +256,7 @@ const ItemDetails = styled.div`
   padding: 0 2rem;
   margin-bottom: 1rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-column: 1 / span 4;
     margin-bottom: 0;
     text-align: right;
@@ -274,7 +270,7 @@ const ItemDetails = styled.div`
     color: var(--black);
     font-weight: 400;
 
-    @media (min-width: ${props => props.theme.screen.lg}) {
+    @media (min-width: ${(props) => props.theme.screen.lg}) {
       margin-bottom: 0;
     }
 
@@ -330,7 +326,7 @@ const ItemScreenshot = styled.div`
   padding: 2rem;
   margin-bottom: 6rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-column: 6 / span 7;
     padding: 0;
     margin-bottom: 22rem;
@@ -364,7 +360,7 @@ const FooterTitle = styled.h2`
   line-height: 1.2;
   color: #929292;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-column: 1 / span 12;
     margin-bottom: 8rem;
     padding: 0;
@@ -375,7 +371,7 @@ const FooterTitle = styled.h2`
 const Logos = styled.div`
   text-align: center;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     grid-column: 1 / span 12;
   }
 `
@@ -383,7 +379,7 @@ const Logos = styled.div`
 const Logo = styled.span`
   margin: 0 2rem;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     margin: 0 4rem;
   }
 

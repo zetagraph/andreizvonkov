@@ -64,7 +64,7 @@ const Container = styled.div`
   transform: translateY(100px);
   animation: ${fadeUp} 0.5s 0.1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     max-width: 1000px;
     padding: 12rem 0 4rem 16rem;
   }
@@ -76,7 +76,7 @@ const Title = styled.h1`
   font-weight: 200;
   line-height: 1.2;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     font-size: 6rem;
   }
 `
@@ -87,7 +87,7 @@ const Date = styled.div`
   font-weight: 200;
   color: var(--grey-1);
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     margin-bottom: 3rem;
   }
 `
@@ -130,14 +130,14 @@ const PrevNext = styled.div`
   padding: 4rem;
   border-top: 1px solid var(--white-2);
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 0 4rem 0 0rem;
   }
 `
 
 const PrevNextItems = styled.ul`
   list-style-type: none;
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -158,7 +158,7 @@ const PrevNextItem = styled.li`
     }
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 14rem 10rem;
     margin: 0;
     flex: 1;
@@ -168,7 +168,7 @@ const PrevNextItem = styled.li`
 const PrevNextItemLeft = styled(PrevNextItem)`
   border-bottom: 1px solid var(--white-2);
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     border-right: 1px solid var(--white-2);
     text-align: right;
     border-bottom: none;
@@ -178,7 +178,7 @@ const PrevNextItemLeft = styled(PrevNextItem)`
 const PrevNextItemRight = styled(PrevNextItem)`
   padding: 0;
   margin: 0;
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     padding: 14rem 10rem;
   }
 `

@@ -48,7 +48,7 @@ const HeaderWrap = styled.header`
   z-index: 1;
   background-color: var(--white);
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     position: relative;
     background-color: transparent;
   }
@@ -57,7 +57,7 @@ const HeaderWrap = styled.header`
 const Line = styled.div`
   display: none;
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     display: block;
     height: 2px;
     width: 12rem;
@@ -72,7 +72,7 @@ const Container = styled.div`
   padding: 2rem;
   border-bottom: 1px solid var(--white-2);
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
+  @media (min-width: ${(props) => props.theme.screen.lg}) {
     max-width: 2000px;
     display: flex;
     align-items: center;

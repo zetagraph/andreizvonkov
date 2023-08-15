@@ -1,20 +1,17 @@
 ---
 title: On Keeping Things Simple
-date: "2019-06-28T22:12:03.284Z"
-description: " "
+date: '2019-06-28T22:12:03.284Z'
+description: ' '
 ---
-
 
 ### [Everything Easy is Hard Again](https://frankchimero.com/writing/everything-easy-is-hard-again)
 
- by Frank Chimero
-
+by Frank Chimero
 
 ### [Resilient Web Design](https://resilientwebdesign.com/)
 
- by Jeremy Keith
-
+by Jeremy Keith
 
 ### [The Cult of the Complex](https://alistapart.com/article/cult-of-the-complex/)
 
- by Jeffrey Zeldman
+by Jeffrey Zeldman
