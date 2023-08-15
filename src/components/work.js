@@ -2,11 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-
-import { ReactComponent as PfizerLogo } from '../images/logos/pfizer.svg'
-import { ReactComponent as FoxLogo } from '../images/logos/fox.svg'
-import { ReactComponent as AgropurLogo } from '../images/logos/agropur.svg'
-import { ReactComponent as NineElevenMemorialLogo } from '../images/logos/nine-eleven-memorial.svg'
+import PfizerLogo from "../images/logos/pfizer.svg";
+import FoxLogo from '../images/logos/fox.svg'
+import AgropurLogo from '../images/logos/agropur.svg'
+import NineElevenMemorialLogo from '../images/logos/nine-eleven-memorial.svg'
 
 const LOGOS = [
   {
@@ -386,6 +385,11 @@ const Logo = styled.span`
 
   @media (min-width: ${props => props.theme.screen.lg}) {
     margin: 0 4rem;
+  }
+
+  svg {
+    width: 150px;
+    height: 100px;
   }
 `
 

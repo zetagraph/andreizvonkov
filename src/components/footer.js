@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ExternalLink from './externalLink'
-
-import { ReactComponent as GitHubIcon } from '../images/icons/github.svg'
+import GitHubIcon from '../images/icons/github.svg'
 
 const SOCIAL_ICONS = [
   {
@@ -63,6 +62,8 @@ const SocialIcons = styled.div`
   }
 
   svg {
+    width: 32px;
+    height: 32px;
     fill: #ccc;
   }
 `
