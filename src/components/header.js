@@ -76,11 +76,15 @@ const Container = styled.div`
     max-width: 2000px;
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 3rem 4rem 3rem 12rem;
     border-bottom: none;
   }
+
+  @media (min-width: 900px) and (max-width: 940px) {
+    padding: 3rem 4rem 3rem 8rem;
+  }
 `
+
 const Brand = styled(GatsbyLink)`
   display: block;
   color: var(--grey-1);
