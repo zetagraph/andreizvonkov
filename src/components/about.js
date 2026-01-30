@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Typewriter from 'typewriter-effect'
 
 const About = () => (
@@ -11,9 +11,7 @@ const About = () => (
         photo: file(relativePath: { eq: "andrei-zvonkov.jpg" }) {
           id
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
           }
         }
       }
@@ -37,8 +35,8 @@ const About = () => (
             data-sal-duration="700"
             data-sal-easing="ease"
           >
-            <Img
-              fluid={data.photo.childImageSharp.fluid}
+            <GatsbyImage
+              image={getImage(data.photo)}
               alt="Andrei Zvonkov"
             />
           </Photo>
@@ -67,7 +65,6 @@ const About = () => (
                 <strong>simple to use</strong> and <strong>accessible</strong>{' '}
                 sites.
               </p>
-              <p>I am based in London, ON, Canada.</p>
             </Description>
           </Details>
         </Container>

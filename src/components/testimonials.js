@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Testimonials = () => (
   <StaticQuery
@@ -10,9 +10,7 @@ const Testimonials = () => (
         photo: file(relativePath: { eq: "jared.jpg" }) {
           id
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
       }
@@ -29,7 +27,7 @@ const Testimonials = () => (
             </BlockquoteText>
             <BlockquoteFooter>
               <BlockquotePhoto>
-                <Img fluid={data.photo.childImageSharp.fluid} alt="author" />
+                <GatsbyImage image={getImage(data.photo)} alt="author" />
               </BlockquotePhoto>
               <BlockquoteAuthor>
                 — Jared Ponchot, <cite>Chief Creative Officer at Lullabot</cite>

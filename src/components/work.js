@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import PfizerLogo from '../images/logos/pfizer.svg'
 import FoxLogo from '../images/logos/fox.svg'
 import AgropurLogo from '../images/logos/agropur.svg'
@@ -33,25 +33,19 @@ const Work = () => (
         lullabot: file(relativePath: { eq: "lullabot.png" }) {
           id
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         cheesebar: file(relativePath: { eq: "cheesebar.png" }) {
           id
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         homeSophos: file(relativePath: { eq: "home-sophos.png" }) {
           id
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         nineElevenMemorial: file(
@@ -59,17 +53,13 @@ const Work = () => (
         ) {
           id
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         bgd: file(relativePath: { eq: "bgd.png" }) {
           id
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
       }
@@ -116,8 +106,8 @@ const Work = () => (
           >
             <ItemScreenshotChrome>•••</ItemScreenshotChrome>
             <span>
-              <Img
-                fluid={data.lullabot.childImageSharp.fluid}
+              <GatsbyImage
+                image={getImage(data.lullabot)}
                 alt="Website Screenshot"
               />
             </span>
@@ -141,8 +131,8 @@ const Work = () => (
           >
             <ItemScreenshotChrome>•••</ItemScreenshotChrome>
             <span>
-              <Img
-                fluid={data.cheesebar.childImageSharp.fluid}
+              <GatsbyImage
+                image={getImage(data.cheesebar)}
                 alt="Website Screenshot"
               />
             </span>
@@ -166,8 +156,8 @@ const Work = () => (
           >
             <ItemScreenshotChrome>•••</ItemScreenshotChrome>
             <span>
-              <Img
-                fluid={data.homeSophos.childImageSharp.fluid}
+              <GatsbyImage
+                image={getImage(data.homeSophos)}
                 alt="Website Screenshot"
               />
             </span>
@@ -191,8 +181,8 @@ const Work = () => (
           >
             <ItemScreenshotChrome>•••</ItemScreenshotChrome>
             <span>
-              <Img
-                fluid={data.bgd.childImageSharp.fluid}
+              <GatsbyImage
+                image={getImage(data.bgd)}
                 alt="Website Screenshot"
               />
             </span>
