@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Canadian Club Website Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: one reading column in the andreizvonkov.com brand: charcoal sans type, thin grey against bold black, and a single yellow accent used for bars, dots and highlights only. */
+:root{
+  --bg:#f5f5f5;
+  --paper:#ffffff;
+  --ink:#222222;
+  --muted:#6b6b6b;
+  --rule:#e6e6e6;
+  --tint:#f5f5f5;
+  --accent:#ffd034;
+  --accent-ink:#222222;
+  --mark:#fff1b8;
+  --sans:"Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141414;--paper:#1b1b1b;--ink:#ececec;--muted:#a3a3a3;--rule:#2f2f2f;--tint:#232323;--accent:#ffd034;--accent-ink:#1b1b1b;--mark:#5a4a0c;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141414;--paper:#1b1b1b;--ink:#ececec;--muted:#a3a3a3;--rule:#2f2f2f;--tint:#232323;--accent:#ffd034;--accent-ink:#1b1b1b;--mark:#5a4a0c;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+::selection{background:var(--accent);color:#222}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+.doc{max-width:860px;margin:0 auto;background:var(--paper);padding:56px clamp(20px,6vw,72px)}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:4px}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:2px}
+p,ul,ol{margin:0}
+.flow>*+*{margin-top:14px}
+
+/* Masthead */
+.brand{font-size:15px;color:var(--muted)}
+.brand .dot{display:inline-block;width:6px;height:6px;margin:0 3px;border-radius:50%;background:var(--accent);vertical-align:middle;position:relative;top:-1px}
+.brand b{color:var(--ink);font-weight:700}
+h1{font-weight:200;font-size:clamp(32px,5.4vw,48px);line-height:1.08;margin:28px 0 0;color:var(--muted);letter-spacing:-.015em;text-wrap:balance}
+h1 strong{display:block;font-weight:700;color:var(--ink)}
+.rule{width:64px;height:2px;background:var(--accent);margin-top:22px}
+.submitted{margin-top:16px;color:var(--muted);font-size:15px;font-weight:300}
+.submitted b{font-weight:600;color:var(--ink)}
+.contact{margin-top:20px;padding-top:16px;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:6px 22px;font-size:14px}
+.contact strong{width:100%;font-size:15px}
+.contact span{color:var(--muted)}
+
+.glance{margin-top:28px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--paper)}
+.glance div{background:var(--tint);padding:14px 16px;min-width:0}
+.glance dt{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.glance dd{margin:4px 0 0;font-size:21px;font-weight:700;line-height:1.25;font-variant-numeric:tabular-nums}
+.glance dd small{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+
+/* Sections */
+section{margin-top:52px}
+h2{position:relative;font-weight:700;font-size:26px;line-height:1.2;margin:0 0 16px;padding-left:20px;text-wrap:balance;letter-spacing:-.01em}
+h2::before{content:"";position:absolute;left:0;top:.12em;width:4px;height:1em;background:var(--accent)}
+h3{font-size:15.5px;font-weight:700;margin:26px 0 8px}
+.lead{font-size:19px;line-height:1.5;font-weight:400;color:var(--muted)}
+.lead strong{font-weight:700;color:var(--ink)}
+ul.bullets{padding-left:20px}
+ul.bullets li+li{margin-top:6px}
+ul.bullets li::marker{color:var(--muted)}
+
+.callout{background:var(--tint);padding:16px 18px}
+.callout strong{color:var(--ink)}
+
+ol.steps{list-style:none;padding:0;counter-reset:s;display:grid;gap:12px}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start}
+ol.steps li::before{content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:13px;display:grid;place-items:center;margin-top:1px}
+
+dl.timeline{margin:0;display:grid;grid-template-columns:150px minmax(0,1fr);border-top:1px solid var(--rule)}
+dl.timeline dt,dl.timeline dd{margin:0;padding:10px 0;border-bottom:1px solid var(--rule)}
+dl.timeline dt{font-weight:700;font-variant-numeric:tabular-nums}
+
+/* Tables */
+.table-wrap{overflow-x:auto;margin-top:14px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--rule)}
+thead th{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--ink)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pricing td:nth-child(2),.pricing td:nth-child(3),.pricing th:nth-child(2),.pricing th:nth-child(3){width:15%}
+.pricing .desc{display:block;margin-top:2px;color:var(--muted);font-size:.93em}
+.pricing .sub td{color:var(--muted)}
+.pricing .total td{border-top:2px solid var(--ink);border-bottom:none;font-size:22px;font-weight:700;padding-top:12px;font-variant-numeric:tabular-nums}
+.pricing .total td:first-child{font-size:14.5px}
+.pricing .total span{background:linear-gradient(transparent 58%,var(--accent) 58%);padding:0 2px}
+.dash{color:var(--muted)}
+.terms{margin-top:16px;display:grid;gap:6px;font-size:15px}
+
+/* Case studies */
+.case{margin-top:36px}
+.case figure{margin:0 0 16px;overflow:hidden;background:var(--tint)}
+.case img{display:block;width:100%;height:auto}
+.case h3+figure{margin-top:16px}
+.case h3{margin:0 0 6px;font-size:21px;font-weight:700}
+.case .kicker{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.facts{margin-top:12px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 16px;font-size:15px}
+.facts dt{font-weight:700}
+.facts dd{margin:0}
+.also{margin-top:30px;padding-top:16px;border-top:1px solid var(--rule);font-size:15px}
+.case+.case{border-top:1px solid var(--rule);padding-top:36px}
+
+.todo{background:var(--mark);padding:0 4px;border-radius:2px}
+footer.sign{margin-top:48px;padding-top:18px;border-top:1px solid var(--rule);font-size:14px;color:var(--muted)}
+footer.sign .dot{display:inline-block;width:6px;height:6px;margin:0 3px;border-radius:50%;background:var(--accent);vertical-align:middle}
+
+/* Screen sizing: larger type and a wider page for reading on screen. Print sizes are set separately below. */
+@media screen{
+  body{font-size:18px;line-height:1.65}
+  .doc{max-width:1040px;padding:72px clamp(20px,7vw,96px)}
+  .flow>*+*{margin-top:18px}
+  section{margin-top:72px}
+  .flow>p,.case>p,.terms p{max-width:72ch}
+  .brand{font-size:16px}
+  h1{font-size:clamp(36px,6vw,62px)}
+  .rule{width:80px;height:3px;margin-top:26px}
+  .submitted{font-size:17px}
+  .contact{font-size:16px;gap:8px 26px}
+  .contact strong{font-size:17px}
+  .glance{margin-top:36px}
+  .glance div{padding:18px 20px}
+  .glance dt{font-size:12px}
+  .glance dd{font-size:27px}
+  .glance dd small{font-size:13.5px}
+  h2{font-size:34px;margin-bottom:22px;padding-left:24px}
+  h2::before{width:5px}
+  h3{font-size:19px;margin-top:32px}
+  .lead{font-size:22px}
+  table{font-size:16px}
+  th,td{padding:12px 14px}
+  thead th{font-size:12.5px}
+  .pricing .total td{font-size:28px}
+  .pricing .total td:first-child{font-size:16px}
+  ol.steps{gap:16px}
+  ol.steps li{grid-template-columns:40px minmax(0,1fr)}
+  ol.steps li::before{width:32px;height:32px;font-size:14px}
+  dl.timeline{grid-template-columns:180px minmax(0,1fr)}
+  dl.timeline dt,dl.timeline dd{padding:13px 0}
+  .callout{padding:20px 24px}
+  .case{margin-top:52px}
+  .case h3{font-size:26px}
+  .case .kicker{font-size:13px}
+  .facts{font-size:17px;grid-template-columns:170px minmax(0,1fr);gap:8px 20px}
+  .also,footer.sign{font-size:16px}
+}
+
+/* Screen spacing rhythm: 8px base. Sections 96, headings 24, blocks 20-32, case studies 80. */
+@media screen{
+  section{margin-top:54px}
+  h2{margin-bottom:24px}
+  .flow>*+*{margin-top:20px}
+  h3{margin:40px 0 12px}
+  .flow>h3{margin-top:40px}
+  .flow>h3+*{margin-top:0}
+  .table-wrap{margin-top:20px;margin-bottom:32px}
+  .flow>.table-wrap+p{margin-top:0}
+  .callout{margin-top:24px}
+  .callout h3{margin-top:0}
+  .case{margin-top:80px}
+  .case+.case{margin-top:56px;padding-top:56px}
+  section>h2+p+.case,section>h2+.case{margin-top:40px}
+  .case figure{margin-bottom:28px}
+  .case h3+figure{margin-top:24px}
+  .case .kicker{margin-bottom:10px}
+  .case h3{margin:0 0 14px}
+  .facts{margin-top:24px}
+  .case .callout{margin-top:36px}
+  .flow>.callout,.case>.callout{max-width:none}
+  .also{margin-top:64px;padding-top:24px}
+  .terms{margin-top:8px}
+  footer.sign{margin-top:80px}
+}
+
+/* Wide screens: centred white column with grey on both sides */
+@media screen and (min-width:900px){
+  body{background:var(--tint);margin:0;padding-block:0}
+  .doc{margin:0 auto;max-width:1120px;min-height:100vh;background:var(--paper);padding:88px clamp(48px,8vw,120px) 96px}
+}
+
+.table-wrap{margin-bottom:28px}
+
+@media (max-width:640px){
+  body{padding-block:0 32px}
+  .doc{padding:32px 0;background:transparent}
+  .glance{grid-template-columns:repeat(2,minmax(0,1fr));background:transparent}
+  dl.timeline,.facts{grid-template-columns:minmax(0,1fr)}
+  dl.timeline dt{border-bottom:none;padding-bottom:0}
+  .facts dd{margin-bottom:8px}
+}
+
+@media print{
+  :root,:root[data-theme="dark"]{--bg:#fff;--paper:#fff;--ink:#222;--muted:#6b6b6b;--rule:#e6e6e6;--tint:#f5f5f5;--accent:#ffd034;--accent-ink:#222;--mark:#fff1b8;color-scheme:light}
+  body{padding:0;font-size:10.5pt;line-height:1.5}
+  .doc{max-width:none;padding:0}
+  section{margin-top:26pt}
+  h1{font-size:30pt;margin-top:18pt}
+  h2{font-size:17pt;margin-bottom:10pt;break-after:avoid}
+  h3{break-after:avoid}
+  .lead{font-size:12.5pt}
+  .glance dd{font-size:14pt}
+  table{font-size:9.5pt}
+  .pricing td,.pricing th{padding:5pt 8pt}
+  .pricing .desc{font-size:8.5pt;line-height:1.35}
+  .pricing .total td{font-size:14pt}
+  .pricing .total td:first-child{font-size:9.5pt}
+  .table-wrap{overflow:visible;margin-bottom:12pt}
+  table,tr,figure,.case,.callout,ol.steps li,dl.timeline,.glance,.keep{break-inside:avoid}
+  .page-break{break-before:page}
+  a{text-decoration:none}
+  .case figure{margin:0 0 8pt;width:100%}
+  section>h2+p{break-after:auto}
+  .case h3+figure{margin-top:8pt}
+  .facts{font-size:9pt;line-height:1.35;gap:2pt 12pt;margin-top:8pt}
+  .case>p{font-size:10pt}
+  .case .callout{padding:8pt 12pt;margin-top:10pt;font-size:9.5pt}
+  .case{margin-top:18pt}
+  .case+.case{border-top:none;margin-top:18pt;padding-top:0}
+}
+</style>
+
+</head>
+<body>
+<main class="doc">
+  <header>
+    <div class="brand">Andrei Zvonkov <span class="dot" aria-hidden="true"></span> <b>Web</b> Developer and <b>UX</b> Designer</div>
+    <h1>Website redesign proposal for the <strong>Canadian Club of Ottawa</strong></h1>
+    <p class="submitted">Submitted to <b>Bryan Detchou</b>, VP, Operations and Communications · October 2026</p>
+    <div class="contact">
+      <strong>Andrei Zvonkov, 14094883 Canada Inc.</strong>
+      <span>London, Ontario</span>
+      <a href="mailto:zvonkov@gmail.com">zvonkov@gmail.com</a>
+      <span>226 286 4028</span>
+      <a href="https://andreizvonkov.com">andreizvonkov.com</a>
+    </div>
+    <dl class="glance">
+      <div><dt>Core price</dt><dd>$16,500<small>CAD, plus HST</small></dd></div>
+      <div><dt>Extended price</dt><dd>$24,500<small>CAD, plus HST</small></dd></div>
+      <div><dt>Platform</dt><dd>Shopify<small>Custom theme, no new fees</small></dd></div>
+      <div><dt>Launch</dt><dd>June 2027<small>Ahead of the 2027–2028 season</small></dd></div>
+    </dl>
+  </header>
+
+  <section class="flow">
+    <h2>About me</h2>
+    <p>I'm Andrei Zvonkov, a web developer and UX designer with about 20 years of experience designing and building websites. I work through my Canadian corporation, 14094883 Canada Inc., based in London, Ontario.</p>
+    <p>I build custom websites for public sector and institutional clients, including <strong>Invest in Canada</strong>, the <strong>Government of British Columbia (WorkBC)</strong> and the <strong>University of Toronto</strong>. These are sites with demanding audiences, bilingual and accessibility requirements, and staff who need to publish without developer help.</p>
+    <p>I handle the full build, not one layer of it: content architecture, custom modules, integrations, platform upgrades and migrations, and ongoing maintenance. For the Club, that means one person who plans, designs, builds and supports the site.</p>
+    <p>You would work with me directly, from discovery through launch and staff training. No account managers or hand-offs between teams.</p>
+  </section>
+
+  <section class="flow">
+    <h2>Understanding the Club</h2>
+    <p class="lead">The new site has three jobs: get people to the next event, make 120+ years of conversations easy to explore, and make sponsorship easy to say yes to.</p>
+    <p>The Club's audience is elected officials, public servants, business leaders and civil society. They are busy, often on a phone between meetings, and expect a credible, non-partisan institution. The site should feel established and current at the same time, which is the same balance the brand refresh is aiming for.</p>
+    <p>The 125th anniversary in 2028 is a natural milestone. A site built on clean, well-structured content can carry an anniversary campaign without a rebuild.</p>
+    <div class="callout keep">
+      <h3 style="margin-top:0">What success looks like</h3>
+      <ul class="bullets">
+        <li>Visitors find and register for upcoming events in two or three taps</li>
+        <li>Past events and recordings are searchable and easy to browse</li>
+        <li>Club staff update events, pages and sponsors without developer help</li>
+        <li>The site meets WCAG 2.1 AA and works well on any device</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="flow">
+    <h2>Recommended approach</h2>
+    <p class="lead"><strong>Keep what works, rebuild what doesn't.</strong> The Club's ticketing, sponsorship payments and Guest Manager setup already run on Shopify, and staff already know it.</p>
+    <p>Replacing that would add risk, cost and retraining in the middle of a season, with no benefit to attendees. I recommend keeping Shopify as the foundation and replacing only what visitors see: a custom theme built around the refreshed brand, with structured content for events, the archive and sponsors.</p>
+    <p>This gives the Club a modern, accessible site with no disruption to event sales, no new hosting or licence fees, and a platform that can sell merchandise later without another rebuild.</p>
+    <p>Shopify themes use a templating approach very close to the content management systems I've built on for 15+ years, so the Club gets a custom theme built with the same rigour as my enterprise and government work. Staff update events, pages, sponsors and archive entries with simple structured fields, not page-building tools.</p>
+    <div class="keep">
+    <h3>Options considered</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Option</th><th>Good for</th><th>Trade-offs</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Keep Shopify, new custom theme</strong><br><span class="dash">Recommended</span></td><td>No disruption to ticketing or sponsorship payments, no new fees, staff already trained</td><td>Archive and content features need careful structuring</td></tr>
+          <tr><td><strong>Drupal or WordPress, Shopify for payments</strong></td><td>Richer content tools, strong multilingual support and a large searchable archive</td><td>Two systems, plus hosting and regular security updates</td></tr>
+          <tr><td><strong>Move ticketing to Eventrise</strong></td><td>Purpose-built event and registration features</td><td>Migration effort, new fees and staff retraining</td></tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    <p>If bilingual content and a large searchable archive become priorities, a full CMS is worth the added hosting and maintenance. I'm platform-neutral and confirm the choice with the Club during discovery, before any design or build work starts.</p>
+
+    <h3>Accessibility</h3>
+    <p>The RFP lists WCAG 2.1 AA as optional. I include it in the core price, because building it in from the start costs little and supports the accessibility goal in the Club's modernization plan. The site will meet WCAG 2.1 AA, in line with AODA. I hold a W3C Web Accessibility certificate.</p>
+    <p>That covers colour contrast, keyboard navigation, screen reader support, captions guidance for recordings, and accessible forms. I test with automated tools (IBM Equal Access, Lighthouse) and manually with a keyboard and screen reader before launch. Staff also get simple guidance for keeping new content accessible.</p>
+
+    <h3>Events and archive</h3>
+    <p>The site includes all the core pages in the RFP: Home, About/History, Upcoming Events, Past Events/Archive, Membership, Sponsorship and Contact. Since the Club is not a membership organization, the Membership page can cover season passes, patrons or other ways to get involved, confirmed with the Club during design.</p>
+    <p>Upcoming events show as a filterable list, which works better on phones than a calendar grid. Each event links straight to registration through the Club's existing Shopify and Guest Manager checkout. Past events, photos and recordings live in a browsable archive, organized by year and topic.</p>
+
+    <h3>Integrations</h3>
+    <p>Mailchimp signup forms connected to the Club's audience lists, and QuickBooks connected to Shopify so ticket and sponsorship sales flow into the books.</p>
+
+    <h3>SEO and analytics</h3>
+    <p>Clean page structure, metadata, redirects from current URLs, a sitemap, and Google Analytics 4 with basic event tracking for registrations.</p>
+  </section>
+
+  <section class="flow">
+    <h2>Process and Club involvement</h2>
+    <p>The Club's time is focused on a few clear decision points, timed around monthly Board meetings.</p>
+    <ol class="steps">
+      <li><div><strong>Discovery.</strong> A kickoff call with the VP Operations and Communications and the Club Administrator, a review of the current site and analytics, and short conversations with the RKESTRA team and two or three regular attendees or sponsors. Output: goals, audiences and a content inventory.</div></li>
+      <li><div><strong>Structure and content plan.</strong> Site map, page layouts as wireframes, and a migration plan. The Club approves the structure and confirms which content moves.</div></li>
+      <li><div><strong>Visual design.</strong> Once the brand is approved, I design the home page and key templates. Two rounds of revisions are included.</div></li>
+      <li><div><strong>Build and migration.</strong> I build the theme on a private preview site. The current site stays live and untouched until the Club tests and approves the new one, so event promotion and registration carry on as normal. Staff can review progress at any time.</div></li>
+      <li><div><strong>Testing.</strong> Accessibility, browser and device testing, plus a check of every event and ticketing flow.</div></li>
+      <li><div><strong>Training and launch.</strong> A recorded training session and a short written guide for staff, then launch at a quiet point in the event calendar, with redirects from old URLs and a final check of every page and checkout on the live site.</div></li>
+      <li><div><strong>Support.</strong> 30 days of post-launch fixes included.</div></li>
+    </ol>
+    <p class="callout"><strong>What I need from the Club:</strong> one main contact, feedback within five business days at each review, final copy and photos, and the approved brand files.</p>
+    <p>I work from London, Ontario. Reviews and Board presentations happen by video call, with in-person visits to Ottawa at key milestones when useful.</p>
+  </section>
+
+  <section class="flow">
+    <div class="keep flow">
+    <h2>Timeline</h2>
+    <p>The site launches in June 2027, ahead of the 2027–2028 season, following the Club's proposed schedule.</p>
+    <dl class="timeline">
+      <dt>Nov–Dec 2026</dt><dd>Discovery, site structure and content plan, and first coordination with the brand designer</dd>
+      <dt>Jan–Feb 2027</dt><dd>Visual design, starting once the refreshed brand is approved</dd>
+      <dt>Mar–May 2027</dt><dd>Build and content migration on a preview site</dd>
+      <dt>Early June 2027</dt><dd>Testing and staff training</dd>
+      <dt>Mid-June 2027</dt><dd>Launch, followed by 30 days of support</dd>
+    </dl>
+    </div>
+    <h3>Dependencies</h3>
+    <ul class="bullets">
+      <li><strong>Brand files.</strong> I coordinate directly with the selected brand designer so the identity works on the web. Visual design starts when approved logo, colours and typography are delivered. If the brand slips, I keep building with placeholder styling so the launch date holds.</li>
+      <li><strong>Content.</strong> Final copy and photos for new pages are due before the build phase ends.</li>
+      <li><strong>Feedback.</strong> Each review assumes a response within five business days.</li>
+    </ul>
+  </section>
+
+  <section class="flow">
+    <h2>Assumptions, recurring costs and options</h2>
+    <ul class="bullets">
+      <li>The site launches in English. A bilingual setup is available as an option.</li>
+      <li>Ticketing stays on Shopify with Guest Manager. Moving to another service is available as an option.</li>
+      <li>Migration covers the current 10 to 15 pages and existing photo and video archives. Recordings are embedded from their video host, confirmed during discovery.</li>
+      <li>Copywriting, content strategy and Google Ad Grant setup are not included. The Club supplies final copy and photos, and holds rights to all images used.</li>
+      <li>The Club keeps full ownership of its domain, Shopify account, theme code and content. I work inside the Club's account as a collaborator.</li>
+      <li>The brand designer supplies approved logo files, colours and fonts with web licences.</li>
+      <li>Launch priorities and registration details are confirmed with the Club during design.</li>
+    </ul>
+    <h3>Recurring costs, paid by the Club directly</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Approximate cost</th></tr></thead>
+        <tbody>
+          <tr><td>Shopify plan and Guest Manager</td><td>Current subscriptions, no change expected</td></tr>
+          <tr><td>Mailchimp and QuickBooks</td><td>Current subscriptions, no change expected</td></tr>
+          <tr><td>Shopify to QuickBooks connector app</td><td>$0 to about $30 per month, depending on the app chosen</td></tr>
+          <tr><td>Domain</td><td>Current renewal, no change</td></tr>
+          <tr><td>Web fonts</td><td>Depends on brand typography, often $0 with Google or Adobe Fonts</td></tr>
+          <tr><td>Maintenance</td><td>None required, since Shopify handles hosting and security updates. Optional monthly support is listed under optional services.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>There are no licence fees or hosting charges from me.</p>
+
+    <div class="keep">
+    <h3>Optional services, priced separately</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Option</th><th class="num">Price (CAD, plus HST)</th></tr></thead>
+        <tbody>
+          <tr><td>Bilingual English and French setup (French copy supplied by the Club)</td><td class="num">$3,500</td></tr>
+          <tr><td>Ticketing review and move to another service, such as Eventrise</td><td class="num">$2,500</td></tr>
+          <tr><td>Online store setup for future merchandise</td><td class="num">$1,500</td></tr>
+          <tr><td>Monthly support and updates (up to 3 hours)</td><td class="num">$300 / month</td></tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </section>
+
+  <section class="flow">
+    <div class="keep flow">
+    <h2>Fixed price</h2>
+    <p>Two fixed-price tiers, so the Club can choose the scope that fits its budget. Prices are in Canadian dollars, plus HST, paid in phases tied to milestones.</p>
+    <div class="table-wrap">
+      <table class="pricing">
+        <thead><tr><th>Phase and what it includes</th><th class="num">Core</th><th class="num">Extended</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Discovery, structure and wireframes</strong><span class="desc">Kickoff, site and analytics review, stakeholder conversations, site map, wireframes and migration plan</span></td><td class="num">$2,400</td><td class="num">$2,800</td></tr>
+          <tr><td><strong>Visual design</strong><span class="desc">Two revision rounds. Core: home page and key templates. Extended: all templates.</span></td><td class="num">$2,800</td><td class="num">$4,400</td></tr>
+          <tr><td><strong>Theme build</strong><span class="desc">Custom Shopify theme with all core pages: Home, About/History, Upcoming Events, Past Events/Archive, Membership (get involved), Sponsorship and Contact. Core: photo and video archive by year. Extended: archive by year and topic with search, plus a 125th anniversary landing page template.</span></td><td class="num">$7,200</td><td class="num">$10,400</td></tr>
+          <tr><td><strong>Content migration and integrations</strong><span class="desc">Current 10 to 15 pages and existing archives, redirects from old URLs, Mailchimp and QuickBooks</span></td><td class="num">$3,200</td><td class="num">$3,600</td></tr>
+          <tr><td><strong>Accessibility, testing and SEO</strong><span class="desc">WCAG 2.1 AA, browser and device testing, SEO setup and GA4. Extended adds a written accessibility audit report.</span></td><td class="num">$2,000</td><td class="num">$3,800</td></tr>
+          <tr><td><strong>Training, launch and support</strong><span class="desc">Recorded training session, staff guide and launch. Core: 30 days of support. Extended: live follow-up session and 90 days of support.</span></td><td class="num">$1,800</td><td class="num">$3,800</td></tr>
+          <tr class="sub"><td>Standard price</td><td class="num">$19,400</td><td class="num">$28,800</td></tr>
+          <tr class="sub"><td>Nonprofit discount (15%)</td><td class="num">−$2,900</td><td class="num">−$4,300</td></tr>
+          <tr class="total"><td>Price (CAD, plus HST)</td><td class="num"><span>$16,500</span></td><td class="num"><span>$24,500</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    <div class="terms">
+      <p><strong>Payment schedule:</strong> 25% at signing, 25% at design approval, 25% at build complete, 25% at launch.</p>
+    </div>
+
+  </section>
+
+
+  <section>
+    <h2>Relevant work</h2>
+    <p>Some of these projects were delivered with agencies. Each one notes who I worked with and what I was responsible for.</p>
+
+    <article class="case">
+      <div class="kicker">Federal government · 2026</div>
+      <h3>Invest in Canada: FDI Report 2025</h3>
+      <figure><img src="img/fdi-report.jpg" alt="Invest in Canada FDI Report 2025, shown on a desktop browser and a phone" width="2720" height="1840"></figure>
+      <p>Invest in Canada is the federal agency that promotes Canada to global investors. Its annual FDI Report, launched in April 2026, is read by government officials, business leaders and investors, the same audience the Club convenes. It turns a large body of data, investment stories and executive quotes into one clear, scrollable report.</p>
+      <dl class="facts">
+        <dt>My role</dt><dd>All design, layout, UX/UI, theming and templating, plus accessibility and performance, as a subcontractor via Adirondack</dd>
+        <dt>Built with</dt><dd>Drupal 10, Twig and SCSS</dd>
+        <dt>Bilingual</dt><dd>English and French versions on separate domains, with a language switcher on every page</dd>
+        <dt>Content</dt><dd>Section navigation, headline statistics, charts with accessible text-table versions, video, and 11 investment success stories with quotes</dd>
+        <dt>Accessibility</dt><dd>Tested with IBM Equal Access and Lighthouse, contrast issues fixed, Lighthouse accessibility score of 93</dd>
+        <dt>Live site</dt><dd><a href="https://www.investcanada.ca/FDIReport2025">English</a> and <a href="https://www.investircanada.ca/RapportIDE2025">French</a></dd>
+      </dl>
+      <p class="callout"><strong>Why it's relevant:</strong> the Club's archive has the same challenge on a smaller scale. Years of events, speakers, recordings and history need to be easy to browse, credible to a policy audience, and accessible to everyone.</p>
+    </article>
+
+    <article class="case">
+      <div class="kicker">Provincial government</div>
+      <h3>WorkBC (Government of British Columbia)</h3>
+      <figure><img src="img/workbc.jpg" alt="WorkBC website, shown on a desktop browser and a phone" width="2720" height="1840"></figure>
+      <p>Developer on the province's public employment information site. Built structured content models and publishing workflows used by dozens of editors across several departments, with accessible themes that met provincial accessibility and content governance standards. <a href="https://www.workbc.ca">workbc.ca</a></p>
+    </article>
+
+    <article class="case">
+      <div class="kicker">Heritage institution · with Foster Interactive</div>
+      <h3>University of Toronto</h3>
+      <figure><img src="img/uoft.jpg" alt="University College, University of Toronto website, shown on a desktop browser and a phone" width="2720" height="1840"></figure>
+      <p>As a developer at Foster Interactive, I led the component-based theming, flexible page layouts and WCAG 2.1 AA templates for three university sites, including University College, and ran user research and usability testing to shape navigation. Like the Club, University College is a heritage institution whose site centres on upcoming events, news and lecture recordings. <a href="https://www.uc.utoronto.ca">uc.utoronto.ca</a></p>
+    </article>
+
+    <article class="case keep">
+      <div class="kicker">Higher education · with Oomph, Inc.</div>
+      <h3>Keene State College</h3>
+      <p>Working with Oomph, Inc., I built custom functionality and a component-based theme, ran accessibility audits and fixes, and wrote guides for content editors. <a href="https://www.keene.edu">keene.edu</a></p>
+    </article>
+
+    <p class="also"><strong>Also:</strong> <a href="https://home.sophos.com">Sophos Home</a>, <a href="https://www.cheesebar.ca">Cheesebar (Agropur)</a>, <a href="https://www.lullabot.com">Lullabot</a> and <a href="https://www.foundationmedicine.com">Foundation Medicine</a>. More at <a href="https://andreizvonkov.com">andreizvonkov.com</a>.</p>
+  </section>
+
+  <section class="keep">
+    <h2>References</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Name</th><th>Role and organization</th><th>Worked together on</th><th>Contact</th></tr></thead>
+        <tbody>
+          <tr><td>François Xavier Lemieux</td><td>Senior Developer, Coldfront Labs Inc.</td><td>Invest in Canada FDI Report 2025</td><td>flemieux@coldfrontlabs.ca<br>(866) 507-8332 x108</td></tr>
+          <tr><td>Stephen Mulvihill</td><td>Owner and Solutions Architect, Cinder Systems Corp.</td><td>Contract web development</td><td>smulvih2@gmail.com<br>613-315-6414</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="sign">Andrei Zvonkov <span class="dot" aria-hidden="true"></span> 14094883 Canada Inc. · zvonkov@gmail.com · 226 286 4028</footer>
+</main>
+
+</body>
+</html>
